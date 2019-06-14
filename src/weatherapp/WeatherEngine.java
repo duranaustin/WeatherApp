@@ -30,12 +30,13 @@ public class WeatherEngine {
     public WeatherEngine() throws Exception {
         api = new WeatherAPI();//reach out to API
         monday = getMonday();
-        //set all fields by parsing json file
+        //TODO set all fields by parsing json file
     }
 
     private WeatherDay getMonday() {
-        // use api object for weather info
+        //TODO use api object for weather info
         return new WeatherDay();
+
     }
 
     private WeatherDay getTuesday() {
@@ -69,5 +70,3 @@ public class WeatherEngine {
         return new WeatherDay();
     }
 }
-
-
