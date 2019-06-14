@@ -1,7 +1,7 @@
 package weatherapp;
 
 /**
- * Brains of weather app
+ * Brains of WeatherApp parses API data and provides fields for WeatherUI.java
  */
 public class WeatherEngine {
 
@@ -14,24 +14,29 @@ public class WeatherEngine {
     private String currentFarenheitDegreeLow = null;
     private String currentCity = null;
     private String currentState = null;
-    private Day day = new Day();
-    public static WeatherDB db;
-    public static WeatherAPI api;
+    private WeatherDay monday;
+    private WeatherDay tuesday;
+    private WeatherDay wednesday;
+    private WeatherDay thursday;
+    private WeatherDay friday;
+    private WeatherDay saturday;
+    private WeatherDay sunday;
+    private WeatherAPI api;
 
-    public WeatherEngine(String location) throws Exception {
-        db = new WeatherDB(location); //reach out to database with location db = new WeatherDB(location);
-        api = new WeatherAPI(location); //reach out to API with location api = new WeatherAPI(location);
+    /**
+     * Upon object creation of WeatherEngine a WeatherAPI object is created  in order to populate WeatherEngine fields/instance variables
+     * @throws Exception
+     */
+    public WeatherEngine() throws Exception {
+        api = new WeatherAPI();//reach out to API
+        monday = getMonday();
         //set all fields by parsing json file
     }
 
-    public class Day{
-        private String day = null;
-        private String dayFarenheitDegreeHigh = null;
-        private String dayFarenheitDegreeLow = null;
-        private String dayWeatherStatus = null;
+    private WeatherDay getMonday() {
+        // use api object for weather info
+        return new WeatherDay();
     }
-
-
 
 }
 

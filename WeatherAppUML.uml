@@ -3,15 +3,14 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="0.0" y="336.0">weatherapp.WeatherAPI</node>
-    <node x="196.0" y="336.0">weatherapp.WeatherStart</node>
-    <node x="0.0" y="430.0">weatherapp.WeatherDB</node>
+    <node x="0.0" y="446.0">weatherapp.WeatherAPI</node>
+    <node x="196.0" y="446.0">weatherapp.WeatherStart</node>
     <node x="276.0" y="0.0">weatherapp.WeatherUI</node>
     <node x="0.0" y="0.0">weatherapp.WeatherEngine</node>
   </nodes>
   <notes />
   <edges />
-  <settings layout="Hierarchic Group" zoom="1.0" x="355.0" y="56.0" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="220.0" y="220.0" />
   <SelectedNodes>
     <node>weatherapp.WeatherAPI</node>
   </SelectedNodes>

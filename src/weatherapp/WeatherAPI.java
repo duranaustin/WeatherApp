@@ -9,9 +9,14 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
+ *
+ * WeatherAPI sends a get request to our created API which notes our IP address and sends us back the respective Weather Info for our IP address location
+ *
+ * EXAMPLE: https://api.weather.gov
  * *** SLC *** https://api.weather.gov/points/39.4192,-111.9507
  * *** SLC Forecast *** https://api.weather.gov/gridpoints/SLC/90,114/forecast
- *  api.openweathermap.org/data/2.5/forecast?id=$5781794&appid=3047a788b7d827644b13600e4d46ab7b
+ * EXAMPLE: our api
+ *  api.openweathermap.org/data/2.5/forecast?id=$5781770&appid=3047a788b7d827644b13600e4d46ab7b
  * *** website : ec2-18-222-251-236.us-east-2.compute.amazonaws.com
  * *** website/json : http://ec2-18-222-251-236.us-east-2.compute.amazonaws.com/currentweather.json
  */
@@ -19,8 +24,11 @@ public class WeatherAPI {
 
     private final String USER_AGENT = "Mozilla/5.0";
 
-    public WeatherAPI(String location) throws Exception {
-        setGetRequest(location);
+    /**
+     * Upon object creation WeatherAPI immediately uses sendGet() to send a get request to our created API
+     * @throws Exception
+     */
+    public WeatherAPI() throws Exception {
         sendGet();
     }
 
