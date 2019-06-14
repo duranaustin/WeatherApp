@@ -11,6 +11,7 @@ import java.net.URL;
 /**
  * *** SLC *** https://api.weather.gov/points/39.4192,-111.9507
  * *** SLC Forecast *** https://api.weather.gov/gridpoints/SLC/90,114/forecast
+ *  api.openweathermap.org/data/2.5/forecast?id=$5781770&appid=3047a788b7d827644b13600e4d46ab7b
  */
 public class WeatherAPI {
 
