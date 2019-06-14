@@ -39,4 +39,34 @@ public class WeatherEngine {
 
     }
 
+    private WeatherDay getTuesday() {
+
+        return new WeatherDay();
+    }
+
+    private  WeatherDay getWednesday() {
+
+        return new WeatherDay();
+    }
+
+    private WeatherDay getThursday() {
+
+        return new WeatherDay();
+    }
+
+    private WeatherDay getFriday() {
+
+        return new WeatherDay();
+
+    }
+
+    private WeatherDay getSaturday() {
+
+        return new WeatherDay();
+    }
+
+    private WeatherDay getSunday() {
+
+        return new WeatherDay();
+    }
 }
