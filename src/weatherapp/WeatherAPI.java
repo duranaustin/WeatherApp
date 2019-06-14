@@ -26,6 +26,7 @@ public class WeatherAPI {
     private int locationID;
     private String apiKey;
     private String unitType; // Imperial or Metric
+    public String response;
 
     /**
      * Upon object creation WeatherAPI immediately uses sendGet() to send a get request to our created API
@@ -33,10 +34,7 @@ public class WeatherAPI {
      */
     public WeatherAPI() throws Exception {
         sendGet();
-    }
-
-    private void setGetRequest(String location) {
-
+        setJsonFile();
     }
 
     /**
@@ -94,17 +92,21 @@ public class WeatherAPI {
             e.printStackTrace();
         }
 
-        test(response.toString());
+        this.response = response.toString();
 
         //print result
         System.out.println(response.toString());
 
     }
 
-    public void test (String s) throws IOException {
+    /**
+     * Writes JSON file to src/resources/myfile.json using response from sendGet()
+     * @throws IOException
+     */
+    public void setJsonFile() throws IOException {
 
         try (FileWriter writer = new FileWriter("src\\weatherapp\\resources\\myfile.json")) {
-            writer.write(s);
+            writer.write(this.response);
         }
     }
 
