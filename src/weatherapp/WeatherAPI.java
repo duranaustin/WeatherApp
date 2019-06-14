@@ -39,8 +39,11 @@ public class WeatherAPI {
 
     }
 
-
-    // HTTP GET request
+    /**
+     * Gets Weather information based off of the OpenWeatherMap API
+     * Uses our API key 3047a788b7d827644b13600e4d46ab7b
+     * @throws Exception
+     */
     private void sendGet() throws Exception {
         // TODO implement dynamic location, currently using salt lake city as example.
 //        {
@@ -59,7 +62,6 @@ public class WeatherAPI {
             URL url;
             apiKey = "3047a788b7d827644b13600e4d46ab7b";
             unitType = "imperial";
-
 
             url = new URL("https://api.openweathermap.org/data/2.5/weather?id="
                     + locationID + "&units=" + unitType +  "&APPID=" + apiKey);
