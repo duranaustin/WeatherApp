@@ -44,15 +44,6 @@ public class WeatherAPI {
      */
     private void sendGet() throws Exception {
         // TODO implement dynamic location, currently using salt lake city as example.
-//        {
-//            "id": 5780993,
-//            "name": "Salt Lake City",
-//            "country": "US",
-//            "coord": {
-//            "lon": -111.891052,
-//                    "lat": 40.76078
-//        }
-//        }
 
         locationID = 5780993; // Salt Lake Cities id as an example.
         StringBuffer response = null;
