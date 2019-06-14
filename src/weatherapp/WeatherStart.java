@@ -1,5 +1,7 @@
 package weatherapp;
 
+import weatherapp.gui.WeatherUI;
+
 /**
  * WeatherStart kicks off the WeatherApp application by creating a WeatherUI object
  */
