@@ -1,70 +1,35 @@
 package weatherapp;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import javax.net.ssl.HttpsURLConnection;
-
-
-
+/**
+ * Brains of weather app
+ */
 public class WeatherEngine {
 
-    private final String USER_AGENT = "Mozilla/5.0";
+    private String getRequest = null;
+    private String getResponse = null;
+    private String currentDay = null;
+    private String currentFarenheitDegree = null;
+    private String currentWeatherStatus = null;
+    private String currentFarenheitDegreeHigh = null;
+    private String currentFarenheitDegreeLow = null;
+    private String currentCity = null;
+    private String currentState = null;
+    private Day day = new Day();
+    public static WeatherDB db;
+    public static WeatherAPI api;
 
-    public void test (String s) throws IOException {
-
-        try (FileWriter writer = new FileWriter("src\\weatherapp\\resources\\myfile.json")) {
-            writer.write(s);
-        }
+    public WeatherEngine(String location) throws Exception {
+        db = new WeatherDB(location); //reach out to database with location db = new WeatherDB(location);
+        api = new WeatherAPI(location); //reach out to API with location api = new WeatherAPI(location);
+        //set all fields by parsing json file
     }
 
-        public static void main(String[] args) throws Exception {
-
-            WeatherEngine http = new WeatherEngine();
-
-            System.out.println("Testing 1 - Send Http GET request");
-            http.sendGet();
-
-        }
-
-        // HTTP GET request
-        private void sendGet() throws Exception {
-
-            String url = "https://api.weather.gov/points/40.712,-111.8389";
-
-            URL obj = new URL(url);
-            HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-
-            // optional default is GET
-            con.setRequestMethod("GET");
-
-            //add request header
-            con.setRequestProperty("User-Agent", USER_AGENT);
-
-            int responseCode = con.getResponseCode();
-            System.out.println("\nSending 'GET' request to URL : " + url);
-            System.out.println("Response Code : " + responseCode);
-
-            BufferedReader in = new BufferedReader(
-                    new InputStreamReader(con.getInputStream()));
-            String inputLine;
-            StringBuffer response = new StringBuffer();
-
-            while ((inputLine = in.readLine()) != null) {
-                response.append(inputLine);
-            }
-            in.close();
-
-            test(response.toString());
-
-            //print result
-            System.out.println(response.toString());
-
-        }
+    public class Day{
+        private String day = null;
+        private String dayFarenheitDegreeHigh = null;
+        private String dayFarenheitDegreeLow = null;
+        private String dayWeatherStatus = null;
+    }
 
 
 
