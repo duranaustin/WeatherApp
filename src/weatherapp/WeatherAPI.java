@@ -12,6 +12,8 @@ import java.net.URL;
  * *** SLC *** https://api.weather.gov/points/39.4192,-111.9507
  * *** SLC Forecast *** https://api.weather.gov/gridpoints/SLC/90,114/forecast
  *  api.openweathermap.org/data/2.5/forecast?id=$5781794&appid=3047a788b7d827644b13600e4d46ab7b
+ * *** website : ec2-18-222-251-236.us-east-2.compute.amazonaws.com
+ * *** website/json : http://ec2-18-222-251-236.us-east-2.compute.amazonaws.com/currentweather.json
  */
 public class WeatherAPI {
 
