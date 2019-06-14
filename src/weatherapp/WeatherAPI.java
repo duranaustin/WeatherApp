@@ -23,6 +23,9 @@ import java.net.URL;
 public class WeatherAPI {
 
     private final String USER_AGENT = "Mozilla/5.0";
+    private int locationID;
+    private String apiKey;
+    private String unitType; // Imperial or Metric
 
     /**
      * Upon object creation WeatherAPI immediately uses sendGet() to send a get request to our created API
@@ -39,31 +42,55 @@ public class WeatherAPI {
 
     // HTTP GET request
     private void sendGet() throws Exception {
+        // TODO implement dynamic location, currently using salt lake city as example.
+//        {
+//            "id": 5780993,
+//            "name": "Salt Lake City",
+//            "country": "US",
+//            "coord": {
+//            "lon": -111.891052,
+//                    "lat": 40.76078
+//        }
+//        }
 
-        String url = "https://api.weather.gov/points/40.712,-111.8389";
+        locationID = 5780993; // Salt Lake Cities id as an example.
+        StringBuffer response = null;
+        try {
+            URL url;
+            apiKey = "3047a788b7d827644b13600e4d46ab7b";
+            unitType = "imperial";
 
-        URL obj = new URL(url);
-        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
-        // optional default is GET
-        con.setRequestMethod("GET");
+            url = new URL("https://api.openweathermap.org/data/2.5/weather?id="
+                    + locationID + "&units=" + unitType +  "&APPID=" + apiKey);
 
-        //add request header
-        con.setRequestProperty("User-Agent", USER_AGENT);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
-        int responseCode = con.getResponseCode();
-        System.out.println("\nSending 'GET' request to URL : " + url);
-        System.out.println("Response Code : " + responseCode);
+            // optional default is GET
+            con.setRequestMethod("GET");
 
-        BufferedReader in = new BufferedReader(
-                new InputStreamReader(con.getInputStream()));
-        String inputLine;
-        StringBuffer response = new StringBuffer();
+            //add request header
+            con.setRequestProperty("User-Agent", USER_AGENT);
 
-        while ((inputLine = in.readLine()) != null) {
-            response.append(inputLine);
+            con.connect();
+
+            int responseCode = con.getResponseCode();
+            System.out.println("\nSending 'GET' request to URL : " + url);
+            System.out.println("Response Code : " + responseCode);
+
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader(con.getInputStream()));
+            String inputLine;
+            response = new StringBuffer();
+
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+            in.close();
+        } catch (IOException e) {
+            System.err.println("Weather connection error in WeatherAPI.sendGet()");
+            e.printStackTrace();
         }
-        in.close();
 
         test(response.toString());
 
