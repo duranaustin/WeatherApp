@@ -56,6 +56,10 @@ public class WeatherAPI {
 
             url = new URL("http://ec2-18-222-251-236.us-east-2.compute.amazonaws.com/localweather.php");
 
+//            Old URL
+//            url = new URL("https://api.openweathermap.org/data/2.5/weather?id="
+//                    + locationID + "&units=" + unitType +  "&APPID=" + apiKey);
+
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
             // optional default is GET
