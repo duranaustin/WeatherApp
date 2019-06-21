@@ -54,8 +54,7 @@ public class WeatherAPI {
             apiKey = "3047a788b7d827644b13600e4d46ab7b";
             unitType = "imperial";
 
-            url = new URL("https://api.openweathermap.org/data/2.5/weather?id="
-                    + locationID + "&units=" + unitType +  "&APPID=" + apiKey);
+            url = new URL("http://ec2-18-222-251-236.us-east-2.compute.amazonaws.com/localweather.php");
 
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
 
