@@ -32,7 +32,7 @@ public class WeatherAPI {
 
     /**
      * Upon object creation WeatherAPI immediately uses sendGet() to send a get request to our created API
-     * @throws Exception
+     * @throws Exception Throws an exception if the sendGet and setJsonFile methods do not work.
      */
     public WeatherAPI() throws Exception {
         sendGet();
@@ -42,11 +42,9 @@ public class WeatherAPI {
     /**
      * Gets Weather information based off of the OpenWeatherMap API
      * Uses our API key 3047a788b7d827644b13600e4d46ab7b
-     * @throws Exception
+     * @throws Exception If the weather connection cannot be established, an exception is thrown.
      */
     private void sendGet() throws Exception {
-        // TODO implement dynamic location, currently using salt lake city as example.
-
         locationID = 5780993; // Salt Lake Cities id as an example.
         StringBuffer response = null;
         try {
@@ -88,6 +86,7 @@ public class WeatherAPI {
             e.printStackTrace();
         }
 
+        assert response != null;
         this.response = response.toString();
 
         //print result
@@ -97,7 +96,7 @@ public class WeatherAPI {
 
     /**
      * Writes JSON file to src/resources/myfile.json using response from sendGet()
-     * @throws IOException
+     * @throws IOException If the file cannot be written, and exception is thrown.
      */
     public void setJsonFile() throws IOException {
 
