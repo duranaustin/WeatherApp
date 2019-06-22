@@ -37,8 +37,9 @@ public class WeatherEngine {
     private String[] parts2;
 
     /**
-     * Upon object creation of WeatherEngine a WeatherAPI object is created  in order to populate WeatherEngine fields/instance variables
-     * @throws Exception
+     * Upon object creation of WeatherEngine a WeatherAPI object is created
+     * in order to populate WeatherEngine fields/instance variables
+     * @throws Exception Throws an exception if  WeatherEngine fails to run
      */
     public WeatherEngine() throws Exception {
         api = new WeatherAPI();//reach out to API
@@ -80,19 +81,21 @@ public class WeatherEngine {
      */
     private void mapParser(String mapString) {
         String ss = this.map.get(mapString).toString();
-        if (mapString.equals("name")) {
-            currentCity = this.map.get(mapString).toString();
-            System.out.println(currentCity);
-        }
-        else if (mapString.equals("main")) {
-            jsonStringSplitter(ss);
-            currentFarenheitDegree = parts2[1] ;
-            System.out.println(currentFarenheitDegree);
-        }
-        else if (mapString.equals("weather")) {
-            jsonStringSplitter(ss);
-            currentWeatherStatus = parts2[5] ;
-            System.out.println(currentWeatherStatus);
+        switch (mapString) {
+            case "name":
+                currentCity = this.map.get(mapString).toString();
+                System.out.println(currentCity);
+                break;
+            case "main":
+                jsonStringSplitter(ss);
+                currentFarenheitDegree = parts2[1];
+                System.out.println(currentFarenheitDegree);
+                break;
+            case "weather":
+                jsonStringSplitter(ss);
+                currentWeatherStatus = parts2[5];
+                System.out.println(currentWeatherStatus);
+                break;
         }
     }
 
