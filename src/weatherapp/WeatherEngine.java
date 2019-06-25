@@ -38,6 +38,7 @@ public class WeatherEngine {
         //TODO set all fields by parsing json file from src/resources/myfile.json
         // Testing mapParser method
         setWeatherForecast();
+        testForcastList();
     }
 
     private void setWeatherForecast(){
@@ -55,56 +56,66 @@ public class WeatherEngine {
              * api has a whole number it gets cast as type Integer.
              * it may also be null if not assigned im not sure
              */
+            System.out.println(instanceForecast.get("main").get("humidity") + " " + instanceForecast.get("main").get("humidity").getClass());
             weatherForecast.setDate((String)((Object) instanceForecast.get("dt_txt")));
+            weatherForecast.setHumidity((Integer) instanceForecast.get("main").get("humidity"));
+
             if(instanceForecast.get("main").get("temp") instanceof Integer){
                 weatherForecast.setTemp((double) ((Integer) instanceForecast.get("main").get("temp")));
             }else{
                 weatherForecast.setTemp((Double) instanceForecast.get("main").get("temp"));
             }
-            weatherForecast.setTemp((Double) instanceForecast.get("main").get("temp"));
+
+
             if(instanceForecast.get("main").get("temp_max") instanceof Integer){
                 weatherForecast.setTemp_max((double) ((Integer) instanceForecast.get("main").get("temp_max")));
             }else{
                 weatherForecast.setTemp_max((Double) instanceForecast.get("main").get("temp_max"));
             }
+
             if(instanceForecast.get("main").get("temp_min") instanceof Integer){
                 weatherForecast.setTemp_min((double) ((Integer) instanceForecast.get("main").get("temp_min")));
             }else{
                 weatherForecast.setTemp_min((Double) instanceForecast.get("main").get("temp_min"));
             }
+
             if(instanceForecast.get("main").get("pressure") instanceof Integer){
                 weatherForecast.setPressure((double) ((Integer) instanceForecast.get("main").get("pressure")));
             }else{
                 weatherForecast.setPressure((Double) instanceForecast.get("main").get("pressure"));
             }
+
             if(instanceForecast.get("main").get("sea_level") instanceof Integer){
                 weatherForecast.setSea_level((double)((Integer) instanceForecast.get("main").get("sea_level")));
             }else {
                 weatherForecast.setSea_level((Double) instanceForecast.get("main").get("sea_level"));
             }
+
             if(instanceForecast.get("main").get("grnd_level") instanceof Integer){
                 weatherForecast.setGrnd_level((double)((Integer) instanceForecast.get("main").get("grnd_level")));
             }else {
                 weatherForecast.setGrnd_level((Double) instanceForecast.get("main").get("grnd_level"));
             }
+
             if(instanceForecast.get("main").get("temp_kf") instanceof Integer){
                 weatherForecast.setTemp_kf((double)((Integer) instanceForecast.get("main").get("temp_kf")));
             }else {
                 weatherForecast.setTemp_kf((Double) instanceForecast.get("main").get("temp_kf"));
             }
-            if(instanceForecast.get("main").get("temp_kf") instanceof Integer){
+
+            if(instanceForecast.get("main").get("speed") instanceof Integer){
                 weatherForecast.setWind_speed((double)((Integer) instanceForecast.get("wind").get("speed")));
             }else {
                 weatherForecast.setWind_speed((Double) instanceForecast.get("wind").get("speed"));
             }
-            if(instanceForecast.get("main").get("temp_kf") instanceof Integer){
+
+            if(instanceForecast.get("main").get("deg") instanceof Integer){
                 weatherForecast.setWind_deg((double)((Integer) instanceForecast.get("wind").get("deg")));
             }else {
                 weatherForecast.setWind_deg((Double) instanceForecast.get("wind").get("deg"));
             }
 
             forecastList.add(weatherForecast);
-
         }
     }
     private void testForcastList(){
@@ -119,6 +130,7 @@ public class WeatherEngine {
                     "\nHumidity: " + forecastList.get(i).getHumidity() +
                     "\nTemp kf: " + forecastList.get(i).getTemp_kf() +
                     "\nwind speed: " + forecastList.get(i).getWind_speed() +
+
                     "\nwind Direction: " + forecastList.get(i).getWind_deg() +
                     "\nDescription: " + forecastList.get(i).getDescription() +
                     "\n\n");
