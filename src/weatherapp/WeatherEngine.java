@@ -2,154 +2,132 @@ package weatherapp;
 
 import javax.swing.text.Keymap;
 import java.io.*;
+import java.lang.reflect.Array;
+import java.lang.reflect.Type;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
-
-import com.fasterxml.jackson.core.JsonGenerationException;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * Brains of WeatherApp parses API data and provides fields for WeatherUI.java
  */
 public class WeatherEngine {
+    public static void main(String[] args) throws Exception {
+        WeatherEngine weatherEngine = new WeatherEngine();
 
-    private String getRequest = null;
-    private String getResponse = null;
-    private String currentDay = null;
-    private String currentFarenheitDegree;
-    private String currentWeatherStatus;
-    private String currentFarenheitDegreeHigh = null;
-    private String currentFarenheitDegreeLow = null;
-    private String currentCity;
-    private String currentState = null;
-    private WeatherDay monday;
-    private WeatherDay tuesday;
-    private WeatherDay wednesday;
-    private WeatherDay thursday;
-    private WeatherDay friday;
-    private WeatherDay saturday;
-    private WeatherDay sunday;
+    }
     private WeatherAPI api;
-    public HashMap<String, Object> map;
-    private String[] parts1;
-    private String[] parts2;
+    private HashMap<String, HashMap<String, ArrayList>> weatherData;
+    private String currentCity;
+    private List<WeatherForecast> forecastList = new ArrayList<>();
+
+    private String currentDay = null;
 
     /**
      * Upon object creation of WeatherEngine a WeatherAPI object is created
      * in order to populate WeatherEngine fields/instance variables
+     * and build an array list of weatherForcast objects with all fields set
+     * TODO test for type exceptions and nullability of fields
      * @throws Exception Throws an exception if  WeatherEngine fails to run
      */
     public WeatherEngine() throws Exception {
-        api = new WeatherAPI();//reach out to API
-        setKeyMap();
-        monday = getMonday();
+        api = new WeatherAPI();//instantiate class
+        weatherData = api.getJsonWeather(); //get weatherData Json HashMap and its nested data
+
+//        monday = getMonday();
         //TODO set all fields by parsing json file from src/resources/myfile.json
-
         // Testing mapParser method
-        System.out.println();
-        mapParser("name");
-        mapParser("main");
-        mapParser("weather");
+        setWeatherForecast();
     }
 
-    private void setKeyMap(){
-        String json = this.api.response;
+    private void setWeatherForecast(){
+        ArrayList fullWeek = (ArrayList) ((Object) weatherData.get("list"));
+        for(int i = 0; i < fullWeek.size(); i++){
+            HashMap<String, HashMap<String, Object>> instanceForecast = (HashMap) ((Object) fullWeek.get(i));
 
-        ObjectMapper mapper = new ObjectMapper();
-        try
-        {
-            //Convert Map to JSON
-            this.map = mapper.readValue(json, new TypeReference<Map<String, Object>>(){});
+            WeatherForecast weatherForecast = new WeatherForecast();
 
-            //Print JSON output
-//            System.out.println(this.map);
-//            System.out.println(this.map.get("name"));
-//            System.out.println(this.map.get("main"));
-        } catch (IOException e) {
-            e.printStackTrace();
+            String date = (String)((Object) instanceForecast.get("dt_txt"));
+
+            /**
+             * these are unsafe calls and should be updated later
+             * testing for typecasting, most values need to be Double but if the
+             * api has a whole number it gets cast as type Integer.
+             * it may also be null if not assigned im not sure
+             */
+            weatherForecast.setDate((String)((Object) instanceForecast.get("dt_txt")));
+            if(instanceForecast.get("main").get("temp") instanceof Integer){
+                weatherForecast.setTemp((double) ((Integer) instanceForecast.get("main").get("temp")));
+            }else{
+                weatherForecast.setTemp((Double) instanceForecast.get("main").get("temp"));
+            }
+            weatherForecast.setTemp((Double) instanceForecast.get("main").get("temp"));
+            if(instanceForecast.get("main").get("temp_max") instanceof Integer){
+                weatherForecast.setTemp_max((double) ((Integer) instanceForecast.get("main").get("temp_max")));
+            }else{
+                weatherForecast.setTemp_max((Double) instanceForecast.get("main").get("temp_max"));
+            }
+            if(instanceForecast.get("main").get("temp_min") instanceof Integer){
+                weatherForecast.setTemp_min((double) ((Integer) instanceForecast.get("main").get("temp_min")));
+            }else{
+                weatherForecast.setTemp_min((Double) instanceForecast.get("main").get("temp_min"));
+            }
+            if(instanceForecast.get("main").get("pressure") instanceof Integer){
+                weatherForecast.setPressure((double) ((Integer) instanceForecast.get("main").get("pressure")));
+            }else{
+                weatherForecast.setPressure((Double) instanceForecast.get("main").get("pressure"));
+            }
+            if(instanceForecast.get("main").get("sea_level") instanceof Integer){
+                weatherForecast.setSea_level((double)((Integer) instanceForecast.get("main").get("sea_level")));
+            }else {
+                weatherForecast.setSea_level((Double) instanceForecast.get("main").get("sea_level"));
+            }
+            if(instanceForecast.get("main").get("grnd_level") instanceof Integer){
+                weatherForecast.setGrnd_level((double)((Integer) instanceForecast.get("main").get("grnd_level")));
+            }else {
+                weatherForecast.setGrnd_level((Double) instanceForecast.get("main").get("grnd_level"));
+            }
+            if(instanceForecast.get("main").get("temp_kf") instanceof Integer){
+                weatherForecast.setTemp_kf((double)((Integer) instanceForecast.get("main").get("temp_kf")));
+            }else {
+                weatherForecast.setTemp_kf((Double) instanceForecast.get("main").get("temp_kf"));
+            }
+            if(instanceForecast.get("main").get("temp_kf") instanceof Integer){
+                weatherForecast.setWind_speed((double)((Integer) instanceForecast.get("wind").get("speed")));
+            }else {
+                weatherForecast.setWind_speed((Double) instanceForecast.get("wind").get("speed"));
+            }
+            if(instanceForecast.get("main").get("temp_kf") instanceof Integer){
+                weatherForecast.setWind_deg((double)((Integer) instanceForecast.get("wind").get("deg")));
+            }else {
+                weatherForecast.setWind_deg((Double) instanceForecast.get("wind").get("deg"));
+            }
+
+            forecastList.add(weatherForecast);
+
+        }
+    }
+    private void testForcastList(){
+        for(int i = 0; i < forecastList.size(); i++){
+            System.out.println("Date: " + forecastList.get(i).getDate() +
+                    "\nTemp: " + forecastList.get(i).getTemp() +
+                    "\nTemp min: " + forecastList.get(i).getTemp_max() +
+                    "\nTemp max: " + forecastList.get(i).getTemp_max() +
+                    "\nPressure: " + forecastList.get(i).getPressure() +
+                    "\nSea Level: " + forecastList.get(i).getSea_level() +
+                    "\nGround Level: " + forecastList.get(i).getGrnd_level() +
+                    "\nHumidity: " + forecastList.get(i).getHumidity() +
+                    "\nTemp kf: " + forecastList.get(i).getTemp_kf() +
+                    "\nwind speed: " + forecastList.get(i).getWind_speed() +
+                    "\nwind Direction: " + forecastList.get(i).getWind_deg() +
+                    "\nDescription: " + forecastList.get(i).getDescription() +
+                    "\n\n");
         }
     }
 
-    /**
-     * Parses the string retrieved from the setKeyMap method map. Once the string is
-     * retrieved it then goes through the jsonStringSplitter method to get split into
-     * it's individual items.
-     * TODO There may be another more efficient/simple way to get deeper into the JSON sections.
-     * @param mapString The String that is used to look up a particular map value.
-     */
-    private void mapParser(String mapString) {
-        String ss = this.map.get(mapString).toString();
-        switch (mapString) {
-            case "name":
-                currentCity = this.map.get(mapString).toString();
-                System.out.println(currentCity);
-                break;
-            case "main":
-                jsonStringSplitter(ss);
-                currentFarenheitDegree = parts2[1];
-                System.out.println(currentFarenheitDegree);
-                break;
-            case "weather":
-                jsonStringSplitter(ss);
-                currentWeatherStatus = parts2[5];
-                System.out.println(currentWeatherStatus);
-                break;
-        }
-    }
-
-    /**
-     * Splits the string that is retrieved from mapParser method and puts them in a String[].
-     *
-     * @param ss The String that is going to be split.
-     */
-    private void jsonStringSplitter(String ss) {
-        StringBuilder sb = new StringBuilder();
-        parts1 = ss.split(", ");
-        for (String s : parts1) {
-            sb.append(s).append("=");
-        }
-        sb.deleteCharAt(sb.length() - 2);
-        String t = sb.toString();
-
-        parts2 = t.split("=");
-    }
-
-    private WeatherDay getMonday() {
+    private WeatherForecast getMonday() {
         //TODO use api object for weather info
-        return new WeatherDay();
+        return new WeatherForecast();
 
-    }
-
-    private WeatherDay getTuesday() {
-
-        return new WeatherDay();
-    }
-
-    private  WeatherDay getWednesday() {
-
-        return new WeatherDay();
-    }
-
-    private WeatherDay getThursday() {
-
-        return new WeatherDay();
-    }
-
-    private WeatherDay getFriday() {
-
-        return new WeatherDay();
-
-    }
-
-    private WeatherDay getSaturday() {
-
-        return new WeatherDay();
-    }
-
-    private WeatherDay getSunday() {
-
-        return new WeatherDay();
     }
 }

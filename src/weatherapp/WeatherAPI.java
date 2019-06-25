@@ -1,12 +1,23 @@
 package weatherapp;
 
 
-import java.io.BufferedReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.*;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.JsonDeserializer;
+
+import java.io.*;
+import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import static java.lang.System.currentTimeMillis;
 
 /**
  *
@@ -23,86 +34,72 @@ import java.net.URL;
  * *** website/json : http://ec2-18-222-251-236.us-east-2.compute.amazonaws.com/currentweather.json
  */
 public class WeatherAPI {
+    private HashMap<String, HashMap<String, ArrayList>> weatherData;
 
-    private final String USER_AGENT = "Mozilla/5.0";
-    private int locationID;
-    private String apiKey;
-    private String unitType; // Imperial or Metric
-    public String response;
+    private ObjectMapper objectMapper = new ObjectMapper();
+    private TypeReference<HashMap<String, Object>> typeRef = new TypeReference<>(){};
+    private URL url = new URL("http://ec2-18-222-251-236.us-east-2.compute.amazonaws.com/localweather.php");
+    private File file = new File("src/weatherapp/resources/localWeatherForecast.json");
 
+    public static void main(String[] args) throws Exception {
+//        WeatherAPI weatherAPI = new WeatherAPI();
+//        Object o = weatherAPI.getJsonWeather();
+    }
     /**
-     * Upon object creation WeatherAPI immediately uses sendGet() to send a get request to our created API
-     * @throws Exception Throws an exception if the sendGet and setJsonFile methods do not work.
+     * Upon object creation WeatherAPI immediately uses getJsonWeather() to send a get request to our created API
+     * @throws Exception Throws an exception if the getJsonWeather and setJsonFile methods do not work.
      */
     public WeatherAPI() throws Exception {
-        sendGet();
-        setJsonFile();
+        getJsonWeather();
     }
 
     /**
      * Gets Weather information based off of the OpenWeatherMap API
      * Uses our API key 3047a788b7d827644b13600e4d46ab7b
      * @throws Exception If the weather connection cannot be established, an exception is thrown.
+     *
+     * if url throws a FileNotFoundException try getting file saved in resources
      */
-    private void sendGet() throws Exception {
-        locationID = 5780993; // Salt Lake Cities id as an example.
-        StringBuffer response = null;
+
+    public HashMap<String, HashMap<String, ArrayList>> getJsonWeather() throws Exception {
         try {
-            URL url;
-            apiKey = "3047a788b7d827644b13600e4d46ab7b";
-            unitType = "imperial";
-
-            url = new URL("http://ec2-18-222-251-236.us-east-2.compute.amazonaws.com/localweather.php");
-
-//            Old URL
-//            url = new URL("https://api.openweathermap.org/data/2.5/weather?id="
-//                    + locationID + "&units=" + unitType +  "&APPID=" + apiKey);
-
-            HttpURLConnection con = (HttpURLConnection) url.openConnection();
-
-            // optional default is GET
-            con.setRequestMethod("GET");
-
-            //add request header
-            con.setRequestProperty("User-Agent", USER_AGENT);
-
-            con.connect();
-
-            int responseCode = con.getResponseCode();
-            System.out.println("\nSending 'GET' request to URL : " + url);
-            System.out.println("Response Code : " + responseCode);
-
-            BufferedReader in = new BufferedReader(
-                    new InputStreamReader(con.getInputStream()));
-            String inputLine;
-            response = new StringBuffer();
-
-            while ((inputLine = in.readLine()) != null) {
-                response.append(inputLine);
+            /**
+             * Set weatherData object to json dataset (url or file ).
+             * Return weatherData object.
+             */
+            if (responseCode() != 200){
+                    this.weatherData = objectMapper.readValue(file, typeRef);
+                    return weatherData;
+            } else{
+                this.weatherData = objectMapper.readValue(url, typeRef);
+                setJsonFile(this.weatherData);
+                return weatherData;
             }
-            in.close();
         } catch (IOException e) {
-            System.err.println("Weather connection error in WeatherAPI.sendGet()");
+            System.err.println("Weather connection error in WeatherAPI.getJsonWeather()");
             e.printStackTrace();
         }
-
-        assert response != null;
-        this.response = response.toString();
-
-        //print result
-        System.out.println(response.toString());
-
+        return weatherData;
     }
 
     /**
-     * Writes JSON file to src/resources/myfile.json using response from sendGet()
+     * Writes JSON file to src/resources/myfile.json using response from getJsonWeather()
      * @throws IOException If the file cannot be written, and exception is thrown.
      */
-    public void setJsonFile() throws IOException {
-
-        try (FileWriter writer = new FileWriter("src\\weatherapp\\resources\\myfile.json")) {
-            writer.write(this.response);
+    public void setJsonFile(Object o) throws IOException {
+        try (FileWriter writer = new FileWriter("src\\weatherapp\\resources\\localWeatherForecast.json")) {
+            objectMapper.writeValue(writer, o);
+            System.out.println("Wrote to file.");
         }
     }
 
+    public int responseCode() throws Exception{
+        HttpURLConnection con = (HttpURLConnection) url.openConnection();
+        con.setRequestMethod("GET");
+        con.setRequestProperty("User-Agent", "Mozilla/5.0");
+        con.connect();
+        int responseCode = con.getResponseCode();
+        System.out.println("Response Code : " + responseCode);
+        return responseCode;
+    }
 }
