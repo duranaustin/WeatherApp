@@ -130,7 +130,6 @@ public class WeatherEngine {
                     "\nHumidity: " + forecastList.get(i).getHumidity() +
                     "\nTemp kf: " + forecastList.get(i).getTemp_kf() +
                     "\nwind speed: " + forecastList.get(i).getWind_speed() +
-
                     "\nwind Direction: " + forecastList.get(i).getWind_deg() +
                     "\nDescription: " + forecastList.get(i).getDescription() +
                     "\n\n");
