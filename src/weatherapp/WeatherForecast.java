@@ -130,4 +130,22 @@ public class WeatherForecast {
         public void setDescription(String description) {
                 this.description = description;
         }
+
+        @Override
+        public String toString() {
+                return "WeatherForecast{" +
+                        "date='" + date + '\'' +
+                        ", temp=" + temp +
+                        ", temp_max=" + temp_max +
+                        ", temp_min=" + temp_min +
+                        ", pressure=" + pressure +
+                        ", sea_level=" + sea_level +
+                        ", grnd_level=" + grnd_level +
+                        ", Humidity=" + Humidity +
+                        ", temp_kf=" + temp_kf +
+                        ", wind_speed=" + wind_speed +
+                        ", wind_deg=" + wind_deg +
+                        ", description='" + description + '\'' +
+                        '}';
+        }
 }

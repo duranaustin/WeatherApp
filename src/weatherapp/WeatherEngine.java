@@ -14,12 +14,11 @@ import java.util.*;
 public class WeatherEngine {
     public static void main(String[] args) throws Exception {
         WeatherEngine weatherEngine = new WeatherEngine();
-
     }
     private WeatherAPI api;
     private HashMap<String, HashMap<String, ArrayList>> weatherData;
     private String currentCity;
-    private List<WeatherForecast> forecastList = new ArrayList<>();
+    public List<WeatherForecast> forecastList = new ArrayList<>();
 
     private String currentDay = null;
 
@@ -38,7 +37,7 @@ public class WeatherEngine {
         //TODO set all fields by parsing json file from src/resources/myfile.json
         // Testing mapParser method
         setWeatherForecast();
-        testForcastList();
+        testForecastList();
     }
 
     private void setWeatherForecast(){
@@ -56,7 +55,7 @@ public class WeatherEngine {
              * api has a whole number it gets cast as type Integer.
              * it may also be null if not assigned im not sure
              */
-            System.out.println(instanceForecast.get("main").get("humidity") + " " + instanceForecast.get("main").get("humidity").getClass());
+//            System.out.println(instanceForecast.get("main").get("humidity") + " " + instanceForecast.get("main").get("humidity").getClass());
             weatherForecast.setDate((String)((Object) instanceForecast.get("dt_txt")));
             weatherForecast.setHumidity((Integer) instanceForecast.get("main").get("humidity"));
 
@@ -118,21 +117,9 @@ public class WeatherEngine {
             forecastList.add(weatherForecast);
         }
     }
-    private void testForcastList(){
+    private void testForecastList(){
         for(int i = 0; i < forecastList.size(); i++){
-            System.out.println("Date: " + forecastList.get(i).getDate() +
-                    "\nTemp: " + forecastList.get(i).getTemp() +
-                    "\nTemp min: " + forecastList.get(i).getTemp_max() +
-                    "\nTemp max: " + forecastList.get(i).getTemp_max() +
-                    "\nPressure: " + forecastList.get(i).getPressure() +
-                    "\nSea Level: " + forecastList.get(i).getSea_level() +
-                    "\nGround Level: " + forecastList.get(i).getGrnd_level() +
-                    "\nHumidity: " + forecastList.get(i).getHumidity() +
-                    "\nTemp kf: " + forecastList.get(i).getTemp_kf() +
-                    "\nwind speed: " + forecastList.get(i).getWind_speed() +
-                    "\nwind Direction: " + forecastList.get(i).getWind_deg() +
-                    "\nDescription: " + forecastList.get(i).getDescription() +
-                    "\n\n");
+            System.out.println(forecastList.get(i).toString());
         }
     }
 

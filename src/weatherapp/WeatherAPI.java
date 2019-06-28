@@ -38,7 +38,7 @@ public class WeatherAPI {
 
     private ObjectMapper objectMapper = new ObjectMapper();
     private TypeReference<HashMap<String, Object>> typeRef = new TypeReference<>(){};
-    private URL url = new URL("http://ec2-18-222-251-236.us-east-2.compute.amazonaws.com/localweathe.php");
+    private URL url = new URL("http://ec2-18-222-251-236.us-east-2.compute.amazonaws.com/localweather.php");
     private File file = new File("src/weatherapp/resources/localWeatherForecast.json");
 
     public static void main(String[] args) throws Exception {
@@ -94,12 +94,19 @@ public class WeatherAPI {
     }
 
     public int responseCode() throws Exception{
-        HttpURLConnection con = (HttpURLConnection) url.openConnection();
-        con.setRequestMethod("GET");
-        con.setRequestProperty("User-Agent", "Mozilla/5.0");
-        con.connect();
-        int responseCode = con.getResponseCode();
-        System.out.println("Response Code : " + responseCode);
-        return responseCode;
+        try{
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            con.setRequestMethod("GET");
+            con.setRequestProperty("User-Agent", "Mozilla/5.0");
+            con.connect();
+            int responseCode = con.getResponseCode();
+            System.out.println("Response Code : " + responseCode);
+            return responseCode;
+        } catch (IOException e){
+            int responseCode = 500;
+            return responseCode;
+        }
+
+
     }
 }
