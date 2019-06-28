@@ -23,24 +23,22 @@ import java.util.HashMap;
  * *** website/json : http://ec2-18-222-251-236.us-east-2.compute.amazonaws.com/currentweather.json
  */
 public class WeatherAPI {
-    private HashMap<String, HashMap<String, ArrayList>> weatherData;
+    public static void main(String[] args) throws Exception {
+        WeatherAPI weatherAPI = new WeatherAPI();
+        Object o = weatherAPI.getJsonWeather();
+    }
 
+    private HashMap<String, HashMap<String, ArrayList>> weatherData;
     private ObjectMapper objectMapper = new ObjectMapper();
     private TypeReference<HashMap<String, Object>> typeRef = new TypeReference<>(){};
     private URL url = new URL("http://ec2-18-222-251-236.us-east-2.compute.amazonaws.com/localweather.php");
     private File file = new File("src/weatherapp/resources/localWeatherForecast.json");
 
-    public static void main(String[] args) throws Exception {
-//        WeatherAPI weatherAPI = new WeatherAPI();
-//        Object o = weatherAPI.getJsonWeather();
-    }
     /**
      * Upon object creation WeatherAPI immediately uses getJsonWeather() to send a get request to our created API
      * @throws Exception Throws an exception if the getJsonWeather and setJsonFile methods do not work.
      */
-    public WeatherAPI() throws Exception {
-        //getJsonWeather();
-    }
+    public WeatherAPI() throws Exception { }
 
     /**
      * Gets Weather information based off of the OpenWeatherMap API
@@ -52,10 +50,6 @@ public class WeatherAPI {
 
     public HashMap<String, HashMap<String, ArrayList>> getJsonWeather() throws Exception {
         try {
-            /**
-             * Set weatherData object to json dataset (url or file ).
-             * Return weatherData object.
-             */
             if (responseCode() != 200){
                     this.weatherData = objectMapper.readValue(file, typeRef);
                     return weatherData;

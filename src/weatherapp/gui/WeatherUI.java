@@ -1,8 +1,12 @@
 package weatherapp.gui;
 
 import weatherapp.WeatherEngine;
+import weatherapp.WeatherForecast;
 
 import javax.swing.*;
+import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.List;
 
 public class WeatherUI extends JFrame {
     private WeatherEngine engine;
@@ -12,6 +16,7 @@ public class WeatherUI extends JFrame {
     private JPanel mainPanel;
     private JLabel lblHello;
     private JPanel subPanel;
+    private List<WeatherForecast> forecastList;
 
     public WeatherUI() throws Exception {
 
@@ -28,9 +33,22 @@ public class WeatherUI extends JFrame {
         frame.pack();
         setLocationRelativeTo(null);
         frame.setVisible(true);
+
+
         this.engine = new WeatherEngine();
         engine.setWeatherForecast();
-        engine.testForecastList();
+        forecastList = engine.getForcastList();
+        System.out.println("\nexample usage of forecastList in WeatherUI.showMainFrame(). \n\n");
+        System.out.println("Weekend Forecast for " + engine.getCurrentCity() + ": \n");
+        for (int i = 0; i < forecastList.size(); i++){
+            String weekday = forecastList.get(i).getWeekday();
+            if((weekday.equals("Thursday")) || weekday.equals("Friday") || weekday.equals("Saturday") || weekday.equals("Sunday")){
+                System.out.println( "DateTime: " + forecastList.get(i).getWeekday() + " " + forecastList.get(i).getDate() + ", Temp: " + forecastList.get(i).getTemp() + ", Status: " + forecastList.get(i).getDescription());
+            }
+        }
+        System.out.println("TODO: convert GMT to our timezone time(its printing in Greenwich Mean Time, which is standard, it just needs a timezone). \nAdd current weather: new php file, extra url call in api, new weather object, new parsing methods.");
+
+
     }
 
     private void createBtnOne() {

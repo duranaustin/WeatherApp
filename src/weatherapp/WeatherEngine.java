@@ -13,8 +13,9 @@ import java.util.*;
  */
 public class WeatherEngine {
     public static void main(String[] args) throws Exception {
-        //WeatherEngine weatherEngine = new WeatherEngine();
+        WeatherEngine weatherEngine = new WeatherEngine();
     }
+
     private WeatherAPI api;
     private HashMap<String, HashMap<String, ArrayList>> weatherData;
     private String currentCity;
@@ -32,10 +33,6 @@ public class WeatherEngine {
     public WeatherEngine() throws Exception {
         api = new WeatherAPI();//instantiate class
         weatherData = api.getJsonWeather(); //get weatherData Json HashMap and its nested data
-        System.out.println("123");
-//        monday = getMonday();
-        //TODO set all fields by parsing json file from src/resources/myfile.json
-        // Testing mapParser method
     }
 
     public void setWeatherForecast(){
@@ -43,25 +40,27 @@ public class WeatherEngine {
         currentCity = city.get("name").toString();
         ArrayList fullWeek = (ArrayList) ((Object) weatherData.get("list"));
         for(int i = 0; i < fullWeek.size(); i++){
+            WeatherForecast weatherForecast = new WeatherForecast();
+
             HashMap<String, HashMap<String, Object>> instanceForecast = (HashMap) ((Object) fullWeek.get(i));
             ArrayList weather = (ArrayList) ((Object) instanceForecast.get("weather"));
             HashMap<String,Object> description = (HashMap) (weather.get(0));
 
             Integer time = (Integer) ((Object) instanceForecast.get("dt"));
             SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
-            Date dateFormat = new Date(time * 1000);
+            Date dateFormat = new Date(((time-6*60*60) * 1000));
             String weekday = sdf.format(dateFormat);
 
-            WeatherForecast weatherForecast = new WeatherForecast();
+            String dt_txt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format((time-6L*60L*60L) * 1000L);
 
-            /**
+            /*
              * these are unsafe calls and should be updated later
              * testing for typecasting, most values need to be Double but if the
              * api has a whole number it gets cast as type Integer.
              * it may also be null if not assigned im not sure
              */
             weatherForecast.setDescription((String) description.get("description"));
-            weatherForecast.setDate((String)((Object) instanceForecast.get("dt_txt")));
+            weatherForecast.setDate(dt_txt);
             weatherForecast.setHumidity((Integer) instanceForecast.get("main").get("humidity"));
             weatherForecast.setTime((Integer) ((Object) instanceForecast.get("dt")));
             weatherForecast.setWeekday(weekday);
@@ -128,6 +127,10 @@ public class WeatherEngine {
         for(int i = 0; i < forecastList.size(); i++){
             System.out.println(forecastList.get(i).toString());
         }
+    }
+
+    public String getCurrentCity() {
+        return currentCity;
     }
 
     public List<WeatherForecast> getForcastList() {

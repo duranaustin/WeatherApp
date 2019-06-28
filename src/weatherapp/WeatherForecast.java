@@ -4,8 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class WeatherForecast {
-        private String date;
         private Integer time;
+        private String date;
         private String weekday;
         private Double temp;
         private Double temp_max;
@@ -19,9 +19,9 @@ public class WeatherForecast {
         private Double wind_deg;
         private String description;
 
-        public WeatherForecast(String date, Integer time, String weekday, Double temp, Double temp_max, Double temp_min, Double pressure, Double sea_level, Double grnd_level, Integer humidity, Double temp_kf, Double wind_speed, Double wind_deg, String description) {
-                this.date = date;
+        public WeatherForecast(Integer time, String date, String weekday, Double temp, Double temp_max, Double temp_min, Double pressure, Double sea_level, Double grnd_level, Integer humidity, Double temp_kf, Double wind_speed, Double wind_deg, String description) {
                 this.time = time;
+                this.date = date;
                 this.weekday = weekday;
                 this.temp = temp;
                 this.temp_max = temp_max;
@@ -40,20 +40,20 @@ public class WeatherForecast {
                 super();
         }
 
-        public String getDate() {
-                return date;
-        }
-
-        public void setDate(String date) {
-                this.date = date;
-        }
-
         public Integer getTime() {
                 return time;
         }
 
         public void setTime(Integer time) {
                 this.time = time;
+        }
+
+        public String getDate() {
+                return date;
+        }
+
+        public void setDate(String date) {
+                this.date = date;
         }
 
         public String getWeekday() {
