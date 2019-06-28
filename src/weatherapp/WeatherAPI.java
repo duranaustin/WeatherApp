@@ -52,7 +52,9 @@ public class WeatherAPI {
         try {
             if (responseCode() != 200){
                     this.weatherData = objectMapper.readValue(file, typeRef);
+                System.out.println("failed to url");
                     return weatherData;
+
             } else{
                 this.weatherData = objectMapper.readValue(url, typeRef);
                 setJsonFile(this.weatherData);

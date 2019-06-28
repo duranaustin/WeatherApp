@@ -108,13 +108,13 @@ public class WeatherEngine {
                 weatherForecast.setTemp_kf((Double) instanceForecast.get("main").get("temp_kf"));
             }
 
-            if(instanceForecast.get("main").get("speed") instanceof Integer){
+            if(instanceForecast.get("wind").get("speed") instanceof Integer){
                 weatherForecast.setWind_speed((double)((Integer) instanceForecast.get("wind").get("speed")));
             }else {
                 weatherForecast.setWind_speed((Double) instanceForecast.get("wind").get("speed"));
             }
 
-            if(instanceForecast.get("main").get("deg") instanceof Integer){
+            if(instanceForecast.get("wind").get("deg") instanceof Integer){
                 weatherForecast.setWind_deg((double)((Integer) instanceForecast.get("wind").get("deg")));
             }else {
                 weatherForecast.setWind_deg((Double) instanceForecast.get("wind").get("deg"));

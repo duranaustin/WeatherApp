@@ -43,7 +43,8 @@ public class WeatherUI extends JFrame {
         for (int i = 0; i < forecastList.size(); i++){
             String weekday = forecastList.get(i).getWeekday();
             if((weekday.equals("Thursday")) || weekday.equals("Friday") || weekday.equals("Saturday") || weekday.equals("Sunday")){
-                System.out.println( "DateTime: " + forecastList.get(i).getWeekday() + " " + forecastList.get(i).getDate() + ", Temp: " + forecastList.get(i).getTemp() + ", Status: " + forecastList.get(i).getDescription());
+                System.out.println( "DateTime: " + forecastList.get(i).getWeekday() + " " + forecastList.get(i).getDate() + ", Temp: "
+                        + forecastList.get(i).getTemp_max() + ", Status: " + forecastList.get(i).getDescription());
             }
         }
         System.out.println("TODO: convert GMT to our timezone time(its printing in Greenwich Mean Time, which is standard, it just needs a timezone). \nAdd current weather: new php file, extra url call in api, new weather object, new parsing methods.");
