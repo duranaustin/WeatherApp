@@ -1,23 +1,12 @@
 package weatherapp;
 
-
-import com.fasterxml.jackson.core.JsonParser;
-import com.fasterxml.jackson.core.*;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonDeserializer;
-
 import java.io.*;
-import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
-
-import static java.lang.System.currentTimeMillis;
 
 /**
  *
@@ -50,7 +39,7 @@ public class WeatherAPI {
      * @throws Exception Throws an exception if the getJsonWeather and setJsonFile methods do not work.
      */
     public WeatherAPI() throws Exception {
-        getJsonWeather();
+        //getJsonWeather();
     }
 
     /**
@@ -100,13 +89,11 @@ public class WeatherAPI {
             con.setRequestProperty("User-Agent", "Mozilla/5.0");
             con.connect();
             int responseCode = con.getResponseCode();
-            System.out.println("Response Code : " + responseCode);
+            System.out.println("Response Code : 1" + responseCode);
             return responseCode;
         } catch (IOException e){
             int responseCode = 500;
             return responseCode;
         }
-
-
     }
 }

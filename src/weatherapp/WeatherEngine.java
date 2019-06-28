@@ -13,12 +13,12 @@ import java.util.*;
  */
 public class WeatherEngine {
     public static void main(String[] args) throws Exception {
-        WeatherEngine weatherEngine = new WeatherEngine();
+        //WeatherEngine weatherEngine = new WeatherEngine();
     }
     private WeatherAPI api;
     private HashMap<String, HashMap<String, ArrayList>> weatherData;
     private String currentCity;
-    public List<WeatherForecast> forecastList = new ArrayList<>();
+    private List<WeatherForecast> forecastList = new ArrayList<>();
 
     private String currentDay = null;
 
@@ -32,22 +32,20 @@ public class WeatherEngine {
     public WeatherEngine() throws Exception {
         api = new WeatherAPI();//instantiate class
         weatherData = api.getJsonWeather(); //get weatherData Json HashMap and its nested data
-
+        System.out.println("123");
 //        monday = getMonday();
         //TODO set all fields by parsing json file from src/resources/myfile.json
         // Testing mapParser method
-        setWeatherForecast();
-        testForecastList();
     }
 
-    private void setWeatherForecast(){
+    public void setWeatherForecast(){
         ArrayList fullWeek = (ArrayList) ((Object) weatherData.get("list"));
         for(int i = 0; i < fullWeek.size(); i++){
             HashMap<String, HashMap<String, Object>> instanceForecast = (HashMap) ((Object) fullWeek.get(i));
+            ArrayList weather = (ArrayList) ((Object) instanceForecast.get("weather"));
+            HashMap<String,Object> description = (HashMap) (weather.get(0));
 
             WeatherForecast weatherForecast = new WeatherForecast();
-
-            String date = (String)((Object) instanceForecast.get("dt_txt"));
 
             /**
              * these are unsafe calls and should be updated later
@@ -55,7 +53,7 @@ public class WeatherEngine {
              * api has a whole number it gets cast as type Integer.
              * it may also be null if not assigned im not sure
              */
-//            System.out.println(instanceForecast.get("main").get("humidity") + " " + instanceForecast.get("main").get("humidity").getClass());
+            weatherForecast.setDescription((String) description.get("description"));
             weatherForecast.setDate((String)((Object) instanceForecast.get("dt_txt")));
             weatherForecast.setHumidity((Integer) instanceForecast.get("main").get("humidity"));
 
@@ -117,15 +115,15 @@ public class WeatherEngine {
             forecastList.add(weatherForecast);
         }
     }
-    private void testForecastList(){
+    public void testForecastList(){
         for(int i = 0; i < forecastList.size(); i++){
             System.out.println(forecastList.get(i).toString());
         }
     }
 
-    private WeatherForecast getMonday() {
+    public List<WeatherForecast> getForcastList() {
         //TODO use api object for weather info
-        return new WeatherForecast();
+        return forecastList;
 
     }
 }

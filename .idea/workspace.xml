@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="349c49ff-2652-4daf-906c-fdcbd960a50f" name="Default Changelist" comment="updated WeatherAPI, WeatherEngine, myFile.json to localWeatherForcast.json (more descriptive), WeatherDay.java to WeatherForecast.java (reflects changes) and fill out WeatherForecast object.&#10;WeatherAPI updates localWeatherForecast.json and returns a HasMap. WeatherEngine runs WeatherForcast.java initializes and populates an ArrayList = forecastList of type WeatherForcast.java.&#10; forecastList holds the 5 day (every 3 hours) forecast that can be accessed by &quot;forecastList[indexOfForcastYouWant].getTemp()&quot; (this will return the temp value from that object in the array).&#10; TODO:  is to organize the forecastList into days, get average temps for the xml display(display cards? that can expand to show the full forecast for that day)">
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/WeatherAPI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/WeatherAPI$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/WeatherAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/WeatherAPI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/WeatherEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/WeatherEngine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/WeatherForecast.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/WeatherForecast.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/RunUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/RunUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/resources/localWeatherForecast.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/resources/localWeatherForecast.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weatherapp/WeatherAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/WeatherAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weatherapp/WeatherEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/WeatherEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weatherapp/WeatherForecast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/WeatherForecast.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weatherapp/gui/RunUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/gui/RunUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherForecast.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherForecast.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weatherapp/resources/localweather2" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,14 +28,14 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6382708">
+    <splitter split-orientation="horizontal" split-proportion="0.46980292">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherEngine.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+                <state relative-caret-position="408">
+                  <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -51,7 +47,7 @@
             <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherStart.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="255">
-                  <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+                  <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
@@ -59,8 +55,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+                <state relative-caret-position="252">
+                  <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#771#772#0" expanded="true" />
@@ -73,19 +69,6 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form">
               <provider selected="true" editor-type-id="ui-designer" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherAPI.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="146">
-                  <caret line="38" column="37" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="37" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="docComment;method#setJsonFile#0;class#WeatherAPI#0" />
-                  </folding>
-                </state>
-              </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
@@ -119,11 +102,24 @@
       </split-first>
       <split-second>
         <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherAPI.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-17">
+                  <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="docComment;method#setJsonFile#0;class#WeatherAPI#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherForecast.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="100">
-                  <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+                <state relative-caret-position="51">
+                  <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
                   <folding>
                     <element signature="e#1251#1252#0" expanded="true" />
                     <element signature="e#1286#1287#0" expanded="true" />
@@ -184,7 +180,7 @@
             <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/RunUI.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="85">
-                  <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+                  <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -193,7 +189,7 @@
             <entry file="file://$PROJECT_DIR$/src/weatherapp/resources/localWeatherForecast.json">
               <provider selected="true" editor-type-id="text-editor">
                 <state>
-                  <caret selection-end-column="13944" />
+                  <caret selection-end-column="13980" />
                 </state>
               </provider>
             </entry>
@@ -227,9 +223,12 @@
       <find>weatherDay</find>
       <find>for</find>
       <find>showmainframe</find>
-      <find>humid</find>
       <find>weatherForecast</find>
+      <find>humid</find>
+      <find>responsecode</find>
+      <find>forecastList.get</find>
       <find>weatherui</find>
+      <find>getJsonWeather</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -255,10 +254,10 @@
         <option value="$PROJECT_DIR$/src/weatherapp/WeatherDay.java" />
         <option value="$PROJECT_DIR$/src/weatherapp/resources/localweather2" />
         <option value="$PROJECT_DIR$/src/weatherapp/gui/RunUI.java" />
-        <option value="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" />
         <option value="$PROJECT_DIR$/src/weatherapp/WeatherForecast.java" />
         <option value="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form" />
         <option value="$PROJECT_DIR$/src/weatherapp/WeatherAPI.java" />
+        <option value="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" />
         <option value="$PROJECT_DIR$/src/weatherapp/WeatherEngine.java" />
       </list>
     </option>
@@ -439,7 +438,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16151386" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16151386" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -449,7 +448,7 @@
       <window_info anchor="bottom" id="GitHub Pull Requests" sideWeight="0.49946696" weight="0.32932165" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.17334779" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.30985916" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -574,27 +573,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/RunUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        <state relative-caret-position="252">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#771#772#0" expanded="true" />
@@ -603,10 +595,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="41" column="10" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#setJsonFile#0;class#WeatherAPI#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherForecast.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#1251#1252#0" expanded="true" />
             <element signature="e#1286#1287#0" expanded="true" />
@@ -662,21 +672,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="38" column="37" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#setJsonFile#0;class#WeatherAPI#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+        <state relative-caret-position="408">
+          <caret line="58" column="51" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

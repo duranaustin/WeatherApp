@@ -11,11 +11,14 @@ public class WeatherUI extends JFrame {
     private JButton btnOne;
     private JPanel mainPanel;
     private JLabel lblHello;
+    private JPanel subPanel;
 
     public WeatherUI() throws Exception {
-        this.engine = new WeatherEngine();
+
         mainPanel.updateUI();
+        subPanel.updateUI();
         createBtnOne();
+
     }
 
     public void showMainFrame() throws Exception {
@@ -25,6 +28,9 @@ public class WeatherUI extends JFrame {
         frame.pack();
         setLocationRelativeTo(null);
         frame.setVisible(true);
+        this.engine = new WeatherEngine();
+        engine.setWeatherForecast();
+        engine.testForecastList();
     }
 
     private void createBtnOne() {
