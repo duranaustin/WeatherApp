@@ -39,11 +39,18 @@ public class WeatherEngine {
     }
 
     public void setWeatherForecast(){
+        HashMap<String, Object> city =(HashMap) weatherData.get("city");
+        currentCity = city.get("name").toString();
         ArrayList fullWeek = (ArrayList) ((Object) weatherData.get("list"));
         for(int i = 0; i < fullWeek.size(); i++){
             HashMap<String, HashMap<String, Object>> instanceForecast = (HashMap) ((Object) fullWeek.get(i));
             ArrayList weather = (ArrayList) ((Object) instanceForecast.get("weather"));
             HashMap<String,Object> description = (HashMap) (weather.get(0));
+
+            Integer time = (Integer) ((Object) instanceForecast.get("dt"));
+            SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+            Date dateFormat = new Date(time * 1000);
+            String weekday = sdf.format(dateFormat);
 
             WeatherForecast weatherForecast = new WeatherForecast();
 
@@ -56,6 +63,8 @@ public class WeatherEngine {
             weatherForecast.setDescription((String) description.get("description"));
             weatherForecast.setDate((String)((Object) instanceForecast.get("dt_txt")));
             weatherForecast.setHumidity((Integer) instanceForecast.get("main").get("humidity"));
+            weatherForecast.setTime((Integer) ((Object) instanceForecast.get("dt")));
+            weatherForecast.setWeekday(weekday);
 
             if(instanceForecast.get("main").get("temp") instanceof Integer){
                 weatherForecast.setTemp((double) ((Integer) instanceForecast.get("main").get("temp")));
