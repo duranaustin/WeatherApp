@@ -46,17 +46,9 @@ public class WeatherEngine {
             ArrayList weather = (ArrayList) ((Object) instanceForecast.get("weather"));
             HashMap<String,Object> description = (HashMap) (weather.get(0));
 
-
-            WeatherForecast weatherForecast = new WeatherForecast();
-
-            String date = (String)((Object) instanceForecast.get("dt_txt"));
-
             Integer time = (Integer) ((Object) instanceForecast.get("dt"));
-            SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
-            Date dateFormat = new Date(((time-6*60*60) * 1000));
-            String weekday = sdf.format(dateFormat);
-
-            String dt_txt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format((time-6L*60L*60L) * 1000L);
+            String weekday = new SimpleDateFormat("EEEE").format((time) *1000L);
+            String dt_txt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format((time) * 1000L);
 
 
             /*
