@@ -49,7 +49,7 @@ public class WeatherUI extends JFrame {
                         + forecastList.get(i).getTemp_max() + ", Status: " + forecastList.get(i).getDescription());
             }
         }
-        System.out.println("TODO: convert GMT to our timezone time(its printing in Greenwich Mean Time, which is standard, it just needs a timezone). \nAdd current weather: new php file, extra url call in api, new weather object, new parsing methods.");
+        System.out.println("TODO: Add current weather: new php file, extra url call in api, new weather object, new parsing methods.");
 
 
 
