@@ -45,9 +45,18 @@ public class WeatherEngine {
         for(int i = 0; i < fullWeek.size(); i++){
             HashMap<String, HashMap<String, Object>> instanceForecast = (HashMap) ((Object) fullWeek.get(i));
 
+<<<<<<< Updated upstream
             WeatherForecast weatherForecast = new WeatherForecast();
 
             String date = (String)((Object) instanceForecast.get("dt_txt"));
+=======
+            Integer time = (Integer) ((Object) instanceForecast.get("dt"));
+
+            String weekday = new SimpleDateFormat("EEEE").format(time*1000L);
+
+
+            String dt_txt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format((time) * 1000L);
+>>>>>>> Stashed changes
 
             /**
              * these are unsafe calls and should be updated later

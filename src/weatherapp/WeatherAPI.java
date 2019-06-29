@@ -39,7 +39,10 @@ public class WeatherAPI {
     private ObjectMapper objectMapper = new ObjectMapper();
     private TypeReference<HashMap<String, Object>> typeRef = new TypeReference<>(){};
     private URL url = new URL("http://ec2-18-222-251-236.us-east-2.compute.amazonaws.com/localweather.php");
+    private URL urlCurrent = new URL("http://ec2-18-222-251-236.us-east-2.compute.amazonaws.com/localCurrentWeather.php");
     private File file = new File("src/weatherapp/resources/localWeatherForecast.json");
+    private File fileCurrent = new File("src/weatherapp/resources/localWeatherCurrent.json");
+
 
     public static void main(String[] args) throws Exception {
 //        WeatherAPI weatherAPI = new WeatherAPI();

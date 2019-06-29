@@ -1,0 +1,50 @@
+{
+  "coord":
+    {
+      "lon":-111.93,
+      "lat":40.56,
+    },
+  "weather":
+    [
+      {
+        "id":800,
+        "main":"Clear",
+        "description":"clear sky",
+        "icon":"01d",
+      }
+    ],
+  "base":"stations",
+  "main":
+    {
+      "temp":90.14,
+      "pressure":1016,
+      "humidity":16,
+      "temp_min":81,
+      "temp_max":95,
+    },
+  "visibility":16093,
+  "wind":
+    {
+      "speed":17.22,
+      "deg":150,
+      "gust":10.8,
+    },
+  "clouds":
+    {
+      "all":1,
+    },
+  "dt":1561764658,
+  "sys":
+    {
+      "type":1,
+      "id":6116,
+      "message":0.0088,
+      "country":"US",
+      "sunrise":1561723157,
+      "sunset":1561777345,
+    },
+  "timezone":-21600,
+  "id":5781770,
+  "name":"South Jordan",
+  "cod":200,
+}
