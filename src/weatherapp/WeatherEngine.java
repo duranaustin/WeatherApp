@@ -14,8 +14,8 @@ import java.util.*;
 public class WeatherEngine {
     public static void main(String[] args) throws Exception {
         WeatherEngine weatherEngine = new WeatherEngine();
-
     }
+
     private WeatherAPI api;
     private HashMap<String, HashMap<String, ArrayList>> weatherData;
     private String currentCity;
@@ -33,110 +33,115 @@ public class WeatherEngine {
     public WeatherEngine() throws Exception {
         api = new WeatherAPI();//instantiate class
         weatherData = api.getJsonWeather(); //get weatherData Json HashMap and its nested data
-
-//        monday = getMonday();
-        //TODO set all fields by parsing json file from src/resources/myfile.json
-        // Testing mapParser method
-        setWeatherForecast();
     }
 
-    private void setWeatherForecast(){
+    public void setWeatherForecast(){
+        HashMap<String, Object> city =(HashMap) weatherData.get("city");
+        currentCity = city.get("name").toString();
         ArrayList fullWeek = (ArrayList) ((Object) weatherData.get("list"));
         for(int i = 0; i < fullWeek.size(); i++){
-            HashMap<String, HashMap<String, Object>> instanceForecast = (HashMap) ((Object) fullWeek.get(i));
+            WeatherForecast weatherForecast = new WeatherForecast();
 
-<<<<<<< Updated upstream
+            HashMap<String, HashMap<String, Object>> instanceForecast = (HashMap) ((Object) fullWeek.get(i));
+            ArrayList weather = (ArrayList) ((Object) instanceForecast.get("weather"));
+            HashMap<String,Object> description = (HashMap) (weather.get(0));
+
+
             WeatherForecast weatherForecast = new WeatherForecast();
 
             String date = (String)((Object) instanceForecast.get("dt_txt"));
-=======
+
             Integer time = (Integer) ((Object) instanceForecast.get("dt"));
+            SimpleDateFormat sdf = new SimpleDateFormat("EEEE");
+            Date dateFormat = new Date(((time-6*60*60) * 1000));
+            String weekday = sdf.format(dateFormat);
 
-            String weekday = new SimpleDateFormat("EEEE").format(time*1000L);
+            String dt_txt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format((time-6L*60L*60L) * 1000L);
 
 
-            String dt_txt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format((time) * 1000L);
->>>>>>> Stashed changes
-
-            /**
+            /*
              * these are unsafe calls and should be updated later
              * testing for typecasting, most values need to be Double but if the
              * api has a whole number it gets cast as type Integer.
              * it may also be null if not assigned im not sure
              */
-            weatherForecast.setDate((String)((Object) instanceForecast.get("dt_txt")));
+            weatherForecast.setDescription((String) description.get("description"));
+            weatherForecast.setDate(dt_txt);
+            weatherForecast.setHumidity((Integer) instanceForecast.get("main").get("humidity"));
+            weatherForecast.setTime((Integer) ((Object) instanceForecast.get("dt")));
+            weatherForecast.setWeekday(weekday);
+
             if(instanceForecast.get("main").get("temp") instanceof Integer){
                 weatherForecast.setTemp((double) ((Integer) instanceForecast.get("main").get("temp")));
             }else{
                 weatherForecast.setTemp((Double) instanceForecast.get("main").get("temp"));
             }
-            weatherForecast.setTemp((Double) instanceForecast.get("main").get("temp"));
+
+
             if(instanceForecast.get("main").get("temp_max") instanceof Integer){
                 weatherForecast.setTemp_max((double) ((Integer) instanceForecast.get("main").get("temp_max")));
             }else{
                 weatherForecast.setTemp_max((Double) instanceForecast.get("main").get("temp_max"));
             }
+
             if(instanceForecast.get("main").get("temp_min") instanceof Integer){
                 weatherForecast.setTemp_min((double) ((Integer) instanceForecast.get("main").get("temp_min")));
             }else{
                 weatherForecast.setTemp_min((Double) instanceForecast.get("main").get("temp_min"));
             }
+
             if(instanceForecast.get("main").get("pressure") instanceof Integer){
                 weatherForecast.setPressure((double) ((Integer) instanceForecast.get("main").get("pressure")));
             }else{
                 weatherForecast.setPressure((Double) instanceForecast.get("main").get("pressure"));
             }
+
             if(instanceForecast.get("main").get("sea_level") instanceof Integer){
                 weatherForecast.setSea_level((double)((Integer) instanceForecast.get("main").get("sea_level")));
             }else {
                 weatherForecast.setSea_level((Double) instanceForecast.get("main").get("sea_level"));
             }
+
             if(instanceForecast.get("main").get("grnd_level") instanceof Integer){
                 weatherForecast.setGrnd_level((double)((Integer) instanceForecast.get("main").get("grnd_level")));
             }else {
                 weatherForecast.setGrnd_level((Double) instanceForecast.get("main").get("grnd_level"));
             }
+
             if(instanceForecast.get("main").get("temp_kf") instanceof Integer){
                 weatherForecast.setTemp_kf((double)((Integer) instanceForecast.get("main").get("temp_kf")));
             }else {
                 weatherForecast.setTemp_kf((Double) instanceForecast.get("main").get("temp_kf"));
             }
-            if(instanceForecast.get("main").get("temp_kf") instanceof Integer){
+
+            if(instanceForecast.get("wind").get("speed") instanceof Integer){
                 weatherForecast.setWind_speed((double)((Integer) instanceForecast.get("wind").get("speed")));
             }else {
                 weatherForecast.setWind_speed((Double) instanceForecast.get("wind").get("speed"));
             }
-            if(instanceForecast.get("main").get("temp_kf") instanceof Integer){
+
+            if(instanceForecast.get("wind").get("deg") instanceof Integer){
                 weatherForecast.setWind_deg((double)((Integer) instanceForecast.get("wind").get("deg")));
             }else {
                 weatherForecast.setWind_deg((Double) instanceForecast.get("wind").get("deg"));
             }
 
             forecastList.add(weatherForecast);
-
         }
     }
-    private void testForcastList(){
+    public void testForecastList(){
         for(int i = 0; i < forecastList.size(); i++){
-            System.out.println("Date: " + forecastList.get(i).getDate() +
-                    "\nTemp: " + forecastList.get(i).getTemp() +
-                    "\nTemp min: " + forecastList.get(i).getTemp_max() +
-                    "\nTemp max: " + forecastList.get(i).getTemp_max() +
-                    "\nPressure: " + forecastList.get(i).getPressure() +
-                    "\nSea Level: " + forecastList.get(i).getSea_level() +
-                    "\nGround Level: " + forecastList.get(i).getGrnd_level() +
-                    "\nHumidity: " + forecastList.get(i).getHumidity() +
-                    "\nTemp kf: " + forecastList.get(i).getTemp_kf() +
-                    "\nwind speed: " + forecastList.get(i).getWind_speed() +
-                    "\nwind Direction: " + forecastList.get(i).getWind_deg() +
-                    "\nDescription: " + forecastList.get(i).getDescription() +
-                    "\n\n");
+            System.out.println(forecastList.get(i).toString());
         }
     }
 
-    private WeatherForecast getMonday() {
+    public String getCurrentCity() {
+        return currentCity;
+    }
+
+    public List<WeatherForecast> getForcastList() {
         //TODO use api object for weather info
-        return new WeatherForecast();
+        return forecastList;
 
     }
 }

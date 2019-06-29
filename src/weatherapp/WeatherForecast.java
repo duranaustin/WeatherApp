@@ -1,9 +1,12 @@
 package weatherapp;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class WeatherForecast {
+        private Integer time;
         private String date;
+        private String weekday;
         private Double temp;
         private Double temp_max;
         private Double temp_min;
@@ -16,8 +19,10 @@ public class WeatherForecast {
         private Double wind_deg;
         private String description;
 
-        public WeatherForecast(String date, Double temp, Double temp_max, Double temp_min, Double pressure, Double sea_level, Double grnd_level, Integer humidity, Double temp_kf, Double wind_speed, Double wind_deg, String description) {
+        public WeatherForecast(Integer time, String date, String weekday, Double temp, Double temp_max, Double temp_min, Double pressure, Double sea_level, Double grnd_level, Integer humidity, Double temp_kf, Double wind_speed, Double wind_deg, String description) {
+                this.time = time;
                 this.date = date;
+                this.weekday = weekday;
                 this.temp = temp;
                 this.temp_max = temp_max;
                 this.temp_min = temp_min;
@@ -35,12 +40,28 @@ public class WeatherForecast {
                 super();
         }
 
+        public Integer getTime() {
+                return time;
+        }
+
+        public void setTime(Integer time) {
+                this.time = time;
+        }
+
         public String getDate() {
                 return date;
         }
 
         public void setDate(String date) {
                 this.date = date;
+        }
+
+        public String getWeekday() {
+                return weekday;
+        }
+
+        public void setWeekday(String weekday) {
+                this.weekday = weekday;
         }
 
         public Double getTemp() {
@@ -129,5 +150,25 @@ public class WeatherForecast {
 
         public void setDescription(String description) {
                 this.description = description;
+        }
+
+        @Override
+        public String toString() {
+                return "WeatherForecast{" +
+                        "date='" + date + '\'' +
+                        ", time=" + time +
+                        ", weekday='" + weekday + '\'' +
+                        ", temp=" + temp +
+                        ", temp_max=" + temp_max +
+                        ", temp_min=" + temp_min +
+                        ", pressure=" + pressure +
+                        ", sea_level=" + sea_level +
+                        ", grnd_level=" + grnd_level +
+                        ", Humidity=" + Humidity +
+                        ", temp_kf=" + temp_kf +
+                        ", wind_speed=" + wind_speed +
+                        ", wind_deg=" + wind_deg +
+                        ", description='" + description + '\'' +
+                        '}';
         }
 }

@@ -1,8 +1,12 @@
 package weatherapp.gui;
 
 import weatherapp.WeatherEngine;
+import weatherapp.WeatherForecast;
 
 import javax.swing.*;
+import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.List;
 
 public class WeatherUI extends JFrame {
     private WeatherEngine engine;
@@ -11,11 +15,15 @@ public class WeatherUI extends JFrame {
     private JButton btnOne;
     private JPanel mainPanel;
     private JLabel lblHello;
+    private JPanel subPanel;
+    private List<WeatherForecast> forecastList;
 
     public WeatherUI() throws Exception {
-        this.engine = new WeatherEngine();
+
         mainPanel.updateUI();
+        subPanel.updateUI();
         createBtnOne();
+
     }
 
     public void showMainFrame() throws Exception {
@@ -25,8 +33,7 @@ public class WeatherUI extends JFrame {
         frame.pack();
         setLocationRelativeTo(null);
         frame.setVisible(true);
-<<<<<<< Updated upstream
-=======
+
 
 
         this.engine = new WeatherEngine();
@@ -45,7 +52,7 @@ public class WeatherUI extends JFrame {
         System.out.println("TODO: convert GMT to our timezone time(its printing in Greenwich Mean Time, which is standard, it just needs a timezone). \nAdd current weather: new php file, extra url call in api, new weather object, new parsing methods.");
 
 
->>>>>>> Stashed changes
+
     }
 
     private void createBtnOne() {
