@@ -58,6 +58,7 @@ public class WeatherEngine {
              * it may also be null if not assigned im not sure
              */
             weatherForecast.setDescription((String) description.get("description"));
+            weatherForecast.setIcon((String) description.get("icon"));
             weatherForecast.setDate(dt_txt);
             weatherForecast.setHumidity((Integer) instanceForecast.get("main").get("humidity"));
             weatherForecast.setTime((Integer) ((Object) instanceForecast.get("dt")));

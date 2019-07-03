@@ -18,8 +18,9 @@ public class WeatherForecast {
         private Double wind_speed;
         private Double wind_deg;
         private String description;
+        private String icon;
 
-        public WeatherForecast(Integer time, String date, String weekday, Double temp, Double temp_max, Double temp_min, Double pressure, Double sea_level, Double grnd_level, Integer humidity, Double temp_kf, Double wind_speed, Double wind_deg, String description) {
+        public WeatherForecast(Integer time, String date, String weekday, Double temp, Double temp_max, Double temp_min, Double pressure, Double sea_level, Double grnd_level, Integer humidity, Double temp_kf, Double wind_speed, Double wind_deg, String description, String icon) {
                 this.time = time;
                 this.date = date;
                 this.weekday = weekday;
@@ -34,6 +35,7 @@ public class WeatherForecast {
                 this.wind_speed = wind_speed;
                 this.wind_deg = wind_deg;
                 this.description = description;
+                this.icon = icon;
         }
 
         public WeatherForecast() {
@@ -152,6 +154,14 @@ public class WeatherForecast {
                 this.description = description;
         }
 
+        public String getIcon() {
+                return icon;
+        }
+
+        public void setIcon(String icon) {
+                this.icon = icon;
+        }
+
         @Override
         public String toString() {
                 return "WeatherForecast{" +
@@ -169,6 +179,7 @@ public class WeatherForecast {
                         ", wind_speed=" + wind_speed +
                         ", wind_deg=" + wind_deg +
                         ", description='" + description + '\'' +
+                        ", icon='" + icon + '\'' +
                         '}';
         }
 }
