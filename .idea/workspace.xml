@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="349c49ff-2652-4daf-906c-fdcbd960a50f" name="Default Changelist" comment="updated WeatherAPI, WeatherEngine, myFile.json to localWeatherForcast.json (more descriptive), WeatherDay.java to WeatherForecast.java (reflects changes) and fill out WeatherForecast object.&#10;WeatherAPI updates localWeatherForecast.json and returns a HasMap. WeatherEngine runs WeatherForcast.java initializes and populates an ArrayList = forecastList of type WeatherForcast.java.&#10; forecastList holds the 5 day (every 3 hours) forecast that can be accessed by &quot;forecastList[indexOfForcastYouWant].getTemp()&quot; (this will return the temp value from that object in the array).&#10; TODO:  is to organize the forecastList into days, get average temps for the xml display(display cards? that can expand to show the full forecast for that day)" />
+    <list default="true" id="349c49ff-2652-4daf-906c-fdcbd960a50f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +33,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherEngine.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
+                <state relative-caret-position="504">
                   <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -67,18 +72,9 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form">
               <provider selected="true" editor-type-id="ui-designer" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="48">
-                  <caret line="2" column="93" selection-start-line="2" selection-start-column="93" selection-end-line="2" selection-end-column="93" />
-                </state>
-              </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
@@ -178,6 +174,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="EthanDarling8 &lt;edarling90@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -199,7 +200,6 @@
         <option value="$PROJECT_DIR$/src/weatherapp/WeatherDay.java" />
         <option value="$PROJECT_DIR$/src/weatherapp/resources/localweather2" />
         <option value="$PROJECT_DIR$/src/weatherapp/gui/RunUI.java" />
-        <option value="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form" />
         <option value="$PROJECT_DIR$/src/weatherapp/WeatherForecast.java" />
         <option value="$PROJECT_DIR$/src/weatherapp/resources/localWeatherForecast.json" />
         <option value="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" />
@@ -207,6 +207,7 @@
         <option value="$PROJECT_DIR$/src/weatherapp/CurrentWeather.java" />
         <option value="$PROJECT_DIR$/src/weatherapp/WeatherEngine.java" />
         <option value="$PROJECT_DIR$/src/weatherapp/WeatherAPI.java" />
+        <option value="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form" />
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
       </list>
     </option>
@@ -229,8 +230,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -241,12 +240,25 @@
             <path>
               <item name="WeatherApp-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="WeatherApp-master" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherApp-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherApp-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherApp-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherApp-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="weatherapp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,7 +274,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -330,7 +342,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561081070861</updated>
-      <workItem from="1562287575186" duration="129000" />
+      <workItem from="1562287575186" duration="742000" />
+      <workItem from="1562288593501" duration="177000" />
     </task>
     <task id="LOCAL-00001" summary="updated WeatherAPI, WeatherEngine, myFile.json to localWeatherForcast.json (more descriptive), WeatherDay.java to WeatherForecast.java (reflects changes) and fill out WeatherForecast object.&#10;WeatherAPI updates localWeatherForecast.json and returns a HasMap. WeatherEngine runs WeatherForcast.java initializes and populates an ArrayList = forecastList of type WeatherForcast.java.&#10; forecastList holds the 5 day (every 3 hours) forecast that can be accessed by &quot;forecastList[indexOfForcastYouWant].getTemp()&quot; (this will return the temp value from that object in the array).&#10; TODO:  is to organize the forecastList into days, get average temps for the xml display(display cards? that can expand to show the full forecast for that day)">
       <created>1561489829607</created>
@@ -360,38 +373,43 @@
       <option name="project" value="LOCAL" />
       <updated>1561496950485</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Removed leftover merge information from xml files.&#10;Repaired VCS.">
+      <created>1562287981621</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1562287981621</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129000" />
+    <option name="totallyTimeSpent" value="919000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="2560" height="1413" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16268894" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16388226" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" weight="0.32995737" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" weight="0.30985916" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989339" visible="true" weight="0.30958036" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32932165" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5010661" side_tool="true" weight="0.15276273" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4968017" weight="0.32932165" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" sideWeight="0.49520257" visible="true" weight="0.3365004" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.4968017" weight="0.32858273" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49520257" weight="0.3365004" />
       <window_info anchor="bottom" id="GitHub Pull Requests" order="11" sideWeight="0.49946696" weight="0.32932165" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="JSON Viewer" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -400,6 +418,8 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Maven" order="6" weight="0.54814005" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="JSON Viewer" order="8" />
+      <window_info anchor="right" id="Database" order="9" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" weight="0.16151386" />
@@ -444,9 +464,50 @@
       </list>
     </option>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated WeatherAPI, WeatherEngine, myFile.json to localWeatherForcast.json (more descriptive), WeatherDay.java to WeatherForecast.java (reflects changes) and fill out WeatherForecast object.&#10;WeatherAPI updates localWeatherForecast.json and returns a HasMap. WeatherEngine runs WeatherForcast.java initializes and populates an ArrayList = forecastList of type WeatherForcast.java.&#10; forecastList holds the 5 day (every 3 hours) forecast that can be accessed by &quot;forecastList[indexOfForcastYouWant].getTemp()&quot; (this will return the temp value from that object in the array).&#10; TODO:  is to organize the forecastList into days, get average temps for the xml display(display cards? that can expand to show the full forecast for that day)" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated WeatherAPI, WeatherEngine, myFile.json to localWeatherForcast.json (more descriptive), WeatherDay.java to WeatherForecast.java (reflects changes) and fill out WeatherForecast object.&#10;WeatherAPI updates localWeatherForecast.json and returns a HasMap. WeatherEngine runs WeatherForcast.java initializes and populates an ArrayList = forecastList of type WeatherForcast.java.&#10; forecastList holds the 5 day (every 3 hours) forecast that can be accessed by &quot;forecastList[indexOfForcastYouWant].getTemp()&quot; (this will return the temp value from that object in the array).&#10; TODO:  is to organize the forecastList into days, get average temps for the xml display(display cards? that can expand to show the full forecast for that day)" />
+    <MESSAGE value="Removed leftover merge information from xml files.&#10;Repaired VCS." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed leftover merge information from xml files.&#10;Repaired VCS." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -467,6 +528,16 @@
     <entry file="file://$PROJECT_DIR$/src/weatherapp/resources/localweather2" />
     <entry file="jar://$USER_HOME$/Programs/ProgramFiles/Java/jdk-12.0.1/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java" />
     <entry file="file://$PROJECT_DIR$/src/weatherapp/CurrentWeather.java" />
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/weatherapp/resources/localWeatherCurrent.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -490,9 +561,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form">
-      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/weatherapp/resources/myfile.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -531,22 +599,15 @@
     <entry file="file://$PROJECT_DIR$/src/weatherapp/resources/localWeatherForecast.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
-          <caret line="2" column="93" selection-start-line="2" selection-start-column="93" selection-end-line="2" selection-end-column="93" />
+          <caret line="2" column="92" selection-start-line="2" selection-start-column="92" selection-end-line="2" selection-end-column="92" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
   <component name="masterDetails">
@@ -612,7 +673,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>11.0.3</last-edited>
+          <last-edited>12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
