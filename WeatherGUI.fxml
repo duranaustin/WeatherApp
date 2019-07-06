@@ -11,31 +11,32 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="weatherapp.gui.WeatherUI">
    <children>
-      <AnchorPane layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="600.0">
+      <AnchorPane layoutY="3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="600.0">
          <children>
-            <Label fx:id="lbForecast1" layoutX="179.0" layoutY="14.0" text="5-Day Forecast">
+            <Label fx:id="lbForecast" layoutX="179.0" layoutY="14.0" text="5-Day Forecast">
                <font>
                   <Font name="Segoe UI" size="37.0" />
                </font>
             </Label>
-            <Label fx:id="lbCurrentDay1" layoutX="256.0" layoutY="60.0" text="CurrentDay">
+            <Label fx:id="lbCurrentDay" layoutX="256.0" layoutY="60.0" text="CurrentDay">
                <font>
                   <Font name="Segoe UI" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbTemp1" layoutX="139.0" layoutY="90.0" text="N/A˚F">
+            <Label fx:id="lbTemp" layoutX="139.0" layoutY="90.0" text="N/A˚F">
                <font>
                   <Font name="Segoe UI" size="75.0" />
                </font>
             </Label>
-            <ImageView fx:id="imgStatus1" fitHeight="100.0" fitWidth="100.0" layoutX="452.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="imgStatusMon1" fitHeight="50.0" fitWidth="50.0" layoutX="32.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="imgStatusTue1" fitHeight="50.0" fitWidth="50.0" layoutX="146.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="imgStatusWed1" fitHeight="50.0" fitWidth="50.0" layoutX="275.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="imgStatusThu1" fitHeight="50.0" fitWidth="50.0" layoutX="397.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="imgStatusFri1" fitHeight="50.0" fitWidth="50.0" layoutX="510.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgStatus" fitHeight="100.0" fitWidth="100.0" layoutX="452.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgStatusMon" fitHeight="50.0" fitWidth="50.0" layoutX="32.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgStatusTue" fitHeight="50.0" fitWidth="50.0" layoutX="146.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgStatusWed" fitHeight="50.0" fitWidth="50.0" layoutX="275.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgStatusThu" fitHeight="50.0" fitWidth="50.0" layoutX="397.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imgStatusFri" fitHeight="50.0" fitWidth="50.0" layoutX="510.0" layoutY="402.0" pickOnBounds="true" preserveRatio="true" />
             <Separator layoutY="369.0" prefHeight="3.0" prefWidth="600.0" />
             <Separator layoutX="234.0" layoutY="370.0" orientation="VERTICAL" prefHeight="150.0" prefWidth="6.0" />
             <Separator layoutX="356.0" layoutY="369.0" orientation="VERTICAL" prefHeight="150.0" prefWidth="6.0" />
@@ -45,77 +46,77 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbCity1" layoutX="172.0" layoutY="175.0" text="City, State">
+            <Label fx:id="lbCity" layoutX="172.0" layoutY="175.0" text="City, State">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbStatus1" layoutX="349.0" layoutY="103.0" text="Status">
+            <Label fx:id="lbStatus" layoutX="349.0" layoutY="103.0" text="Status">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbHiLo1" layoutX="349.0" layoutY="130.0" text="N/A / N/A">
+            <Label fx:id="lbHiLo" layoutX="349.0" layoutY="130.0" text="N/A / N/A">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbStatusMon1" layoutX="16.0" layoutY="452.0" text="Status">
+            <Label fx:id="lbStatusMon" layoutX="16.0" layoutY="452.0" text="Status">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbHiLoMon1" layoutX="16.0" layoutY="479.0" text="N/A / N/A">
+            <Label fx:id="lbHiLoMon" layoutX="16.0" layoutY="479.0" text="N/A / N/A">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbStatusTue1" layoutX="134.0" layoutY="452.0" text="Status">
+            <Label fx:id="lbStatusTue" layoutX="134.0" layoutY="452.0" text="Status">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbHiLoTue1" layoutX="134.0" layoutY="479.0" text="N/A / N/A">
+            <Label fx:id="lbHiLoTue" layoutX="134.0" layoutY="479.0" text="N/A / N/A">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbStatusWed1" layoutX="255.0" layoutY="452.0" text="Status">
+            <Label fx:id="lbStatusWed" layoutX="255.0" layoutY="452.0" text="Status">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbHiLoWed1" layoutX="255.0" layoutY="479.0" text="N/A / N/A">
+            <Label fx:id="lbHiLoWed" layoutX="255.0" layoutY="479.0" text="N/A / N/A">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbStatusThu1" layoutX="386.0" layoutY="452.0" text="Status">
+            <Label fx:id="lbStatusThu" layoutX="386.0" layoutY="452.0" text="Status">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbHiLoThu1" layoutX="386.0" layoutY="479.0" text="N/A / N/A">
+            <Label fx:id="lbHiLoThu" layoutX="386.0" layoutY="479.0" text="N/A / N/A">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbStatusFri1" layoutX="502.0" layoutY="452.0" text="Status">
+            <Label fx:id="lbStatusFri" layoutX="502.0" layoutY="452.0" text="Status">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="lbHiLoFri1" layoutX="502.0" layoutY="479.0" text="N/A / N/A">
+            <Label fx:id="lbHiLoFri" layoutX="502.0" layoutY="479.0" text="N/A / N/A">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="txtSearchCity1" layoutX="24.0" layoutY="59.0" prefHeight="35.0" prefWidth="121.0" promptText="Search City" />
-            <Button fx:id="btnSearch1" layoutX="146.0" layoutY="59.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="28.0">
+            <TextField fx:id="txtSearchCity" layoutX="24.0" layoutY="59.0" prefHeight="35.0" prefWidth="121.0" promptText="Search City" />
+            <Button fx:id="btnSearch" layoutX="146.0" layoutY="59.0" mnemonicParsing="false" onAction="#searchCity" prefHeight="11.0" prefWidth="28.0">
                <graphic>
                   <ImageView fitHeight="27.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../git/WeatherApp2/src/weatherapp/resources/search.png" />
+                        <Image url="@../../../../WeatherApp2/src/weatherapp/resources/search.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -197,90 +198,90 @@
                               <Font name="Segoe UI" size="18.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="imgStatus9pm1" fitHeight="50.0" fitWidth="50.0" layoutX="885.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
-                        <ImageView fx:id="imgStatus6pm1" fitHeight="50.0" fitWidth="50.0" layoutX="761.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
-                        <ImageView fx:id="imgStatus3pm1" fitHeight="50.0" fitWidth="50.0" layoutX="641.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
-                        <Label fx:id="lbStatus3pm1" layoutX="634.0" layoutY="84.0" text="Status">
+                        <ImageView fx:id="imgStatus9pm" fitHeight="50.0" fitWidth="50.0" layoutX="885.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgStatus6pm" fitHeight="50.0" fitWidth="50.0" layoutX="761.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgStatus3pm" fitHeight="50.0" fitWidth="50.0" layoutX="641.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="lbStatus3pm" layoutX="634.0" layoutY="84.0" text="Status">
                            <font>
                               <Font name="Segoe UI" size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbHiLo3pm1" layoutX="634.0" layoutY="113.0" text="N/A / N/A">
+                        <Label fx:id="lbHiLo3pm" layoutX="634.0" layoutY="113.0" text="N/A / N/A">
                            <font>
                               <Font name="Segoe UI" size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbStatus6pm1" layoutX="754.0" layoutY="84.0" text="Status">
+                        <Label fx:id="lbStatus6pm" layoutX="754.0" layoutY="84.0" text="Status">
                            <font>
                               <Font name="Segoe UI" size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbHiLo6pm1" layoutX="754.0" layoutY="113.0" text="N/A / N/A">
+                        <Label fx:id="lbHiLo6pm" layoutX="754.0" layoutY="113.0" text="N/A / N/A">
                            <font>
                               <Font name="Segoe UI" size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbStatus9pm1" layoutX="878.0" layoutY="84.0" text="Status">
+                        <Label fx:id="lbStatus9pm" layoutX="878.0" layoutY="84.0" text="Status">
                            <font>
                               <Font name="Segoe UI" size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbHiLo9pm1" layoutX="878.0" layoutY="113.0" text="N/A / N/A">
+                        <Label fx:id="lbHiLo9pm" layoutX="878.0" layoutY="113.0" text="N/A / N/A">
                            <font>
                               <Font name="Segoe UI" size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbStatus12am1" layoutX="18.0" layoutY="82.0" text="Status">
+                        <Label fx:id="lbStatus12am" layoutX="18.0" layoutY="82.0" text="Status">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbStatus3am1" layoutX="136.0" layoutY="82.0" text="Status">
+                        <Label fx:id="lbStatus3am" layoutX="136.0" layoutY="82.0" text="Status">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbStatus6am1" layoutX="261.0" layoutY="82.0" text="Status">
+                        <Label fx:id="lbStatus6am" layoutX="261.0" layoutY="82.0" text="Status">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbStatus9am1" layoutX="383.0" layoutY="82.0" text="Status">
+                        <Label fx:id="lbStatus9am" layoutX="383.0" layoutY="82.0" text="Status">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbStatus12pm1" layoutX="507.0" layoutY="82.0" text="Status">
+                        <Label fx:id="lbStatus12pm" layoutX="507.0" layoutY="82.0" text="Status">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <ImageView fx:id="imgStatus12am1" fitHeight="50.0" fitWidth="50.0" layoutX="27.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
-                        <ImageView fx:id="imgStatus3am1" fitHeight="50.0" fitWidth="50.0" layoutX="149.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
-                        <ImageView fx:id="imgStatus6am1" fitHeight="50.0" fitWidth="50.0" layoutX="275.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
-                        <ImageView fx:id="imgStatus9am1" fitHeight="50.0" fitWidth="50.0" layoutX="396.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
-                        <ImageView fx:id="imgStatus12pm1" fitHeight="50.0" fitWidth="50.0" layoutX="520.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
-                        <Label fx:id="lbHiLo12am1" layoutX="18.0" layoutY="111.0" text="N/A /N/A">
+                        <ImageView fx:id="imgStatus12am" fitHeight="50.0" fitWidth="50.0" layoutX="27.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgStatus3am" fitHeight="50.0" fitWidth="50.0" layoutX="149.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgStatus6am" fitHeight="50.0" fitWidth="50.0" layoutX="275.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgStatus9am" fitHeight="50.0" fitWidth="50.0" layoutX="396.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgStatus12pm" fitHeight="50.0" fitWidth="50.0" layoutX="520.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label fx:id="lbHiLo12am" layoutX="18.0" layoutY="111.0" text="N/A /N/A">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbHiLo3am1" layoutX="136.0" layoutY="111.0" text="N/A /N/A">
+                        <Label fx:id="lbHiLo3am" layoutX="136.0" layoutY="111.0" text="N/A /N/A">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbHiLo6am1" layoutX="261.0" layoutY="111.0" text="N/A /N/A">
+                        <Label fx:id="lbHiLo6am" layoutX="261.0" layoutY="111.0" text="N/A /N/A">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbHiLo9am1" layoutX="383.0" layoutY="111.0" text="N/A /N/A">
+                        <Label fx:id="lbHiLo9am" layoutX="383.0" layoutY="111.0" text="N/A /N/A">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lbHiLo12pm1" layoutX="507.0" layoutY="111.0" text="N/A /N/A">
+                        <Label fx:id="lbHiLo12pm" layoutX="507.0" layoutY="111.0" text="N/A /N/A">
                            <font>
                               <Font size="18.0" />
                            </font>
