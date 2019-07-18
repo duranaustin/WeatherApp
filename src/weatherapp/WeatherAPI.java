@@ -24,15 +24,15 @@ import java.util.HashMap;
  */
 public class WeatherAPI {
     public static void main(String[] args) throws Exception {
-        WeatherAPI weatherAPI = new WeatherAPI();
-        Object o = weatherAPI.getJsonWeather();
+//        WeatherAPI weatherAPI = new WeatherAPI();
+//        Object o = weatherAPI.getJsonWeather();
     }
 
     private HashMap<String, HashMap<String, ArrayList>> weatherData;
     private ObjectMapper objectMapper = new ObjectMapper();
     private TypeReference<HashMap<String, Object>> typeRef = new TypeReference<>(){};
-    private URL url = new URL("http://ec2-18-222-251-236.us-east-2.compute.amazonaws.com/localweather.php");
     private File file = new File("src/weatherapp/resources/localWeatherForecast.json");
+
 
     /**
      * Upon object creation WeatherAPI immediately uses getJsonWeather() to send a get request to our created API
@@ -48,16 +48,16 @@ public class WeatherAPI {
      * if url throws a FileNotFoundException try getting file saved in resources
      */
 
-    public HashMap<String, HashMap<String, ArrayList>> getJsonWeather() throws Exception {
+    public HashMap<String, HashMap<String, ArrayList>> getJsonWeather(URL url, File file) throws Exception {
         try {
-            if (responseCode() != 200){
+            if (responseCode(url) != 200){
                     this.weatherData = objectMapper.readValue(file, typeRef);
                 System.out.println("failed to url");
                     return weatherData;
 
             } else{
                 this.weatherData = objectMapper.readValue(url, typeRef);
-                setJsonFile(this.weatherData);
+                setJsonFile(this.weatherData, file);
                 return weatherData;
             }
         } catch (IOException e) {
@@ -71,21 +71,21 @@ public class WeatherAPI {
      * Writes JSON file to src/resources/myfile.json using response from getJsonWeather()
      * @throws IOException If the file cannot be written, and exception is thrown.
      */
-    public void setJsonFile(Object o) throws IOException {
-        try (FileWriter writer = new FileWriter("src\\weatherapp\\resources\\localWeatherForecast.json")) {
+    public void setJsonFile(Object o, File file) throws IOException {
+        try (FileWriter writer = new FileWriter(file)) {
             objectMapper.writeValue(writer, o);
             System.out.println("Wrote to file.");
         }
     }
 
-    public int responseCode() throws Exception{
+    public int responseCode(URL url) throws Exception{
         try{
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
             con.setRequestProperty("User-Agent", "Mozilla/5.0");
             con.connect();
             int responseCode = con.getResponseCode();
-            System.out.println("Response Code : 1" + responseCode);
+            System.out.println("Response Code : " + responseCode + " url : " + url);
             return responseCode;
         } catch (IOException e){
             int responseCode = 500;
