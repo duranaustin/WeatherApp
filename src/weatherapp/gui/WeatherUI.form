@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="weatherapp.gui.WeatherUI">
-  <grid id="27dc6" binding="mainFrame" layout-manager="GridBagLayout">
+  <grid id="27dc6" binding="mainFrame" custom-create="true" layout-manager="GridBagLayout">
     <constraints>
       <xy x="20" y="20" width="1349" height="776"/>
     </constraints>
     <properties>
+      <background color="-5958656"/>
       <minimumSize width="900" height="500"/>
       <opaque value="false"/>
       <preferredSize width="900" height="700"/>
     </properties>
     <border type="empty"/>
     <children>
-      <grid id="b2e7a" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+      <grid id="b2e7a" binding="mainPanel" custom-create="true" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <background color="-5958656"/>
           <doubleBuffered value="true"/>
           <enabled value="true"/>
           <opaque value="false"/>
@@ -25,25 +25,26 @@
         <border type="none"/>
         <children/>
       </grid>
-      <grid id="9a9e8" binding="scrollPaneHolder" layout-manager="BorderLayout" hgap="0" vgap="0">
+      <grid id="9a9e8" binding="scrollPaneHolder" custom-create="true" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="0.0"/>
         </constraints>
         <properties>
-          <background color="-12510403"/>
+          <minimumSize width="0" height="100"/>
           <opaque value="false"/>
+          <preferredSize width="0" height="150"/>
         </properties>
         <border type="none"/>
         <children/>
       </grid>
-      <grid id="4dc46" binding="fiveDaySummary" layout-manager="BorderLayout" hgap="0" vgap="0">
+      <grid id="4dc46" binding="fiveDaySummary" custom-create="true" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="4" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="1.0"/>
         </constraints>
         <properties>
-          <background color="-7055333"/>
+          <opaque value="false"/>
         </properties>
         <border type="none"/>
         <children/>

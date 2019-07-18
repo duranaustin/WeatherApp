@@ -19,7 +19,7 @@ public class WeatherUI extends JFrame {
     private JPanel mainFrame;
     private JPanel mainPanel;
     private JScrollPane forecastScroller = new JScrollPane();
-    private JPanel scrollerInset = new TransparentPanel();
+    private JPanel scrollerInset;
     private JPanel fiveDaySummaryHolder;
     private JPanel fiveDaySummary;
     private JPanel scrollPaneHolder;
@@ -50,29 +50,22 @@ public class WeatherUI extends JFrame {
          */
         $$$setupUI$$$();
         mainFrame.updateUI();
-        mainFrame.setLayout(new GridLayout(3, 2));
-//        mainFrame.setBackground(Color.RED);
-//        mainFrame.add(new JLabel((new ImageIcon(ImageIO.read(getClass().getResource("/src/weatherapp/resources/icon/01d.png"))))));
+
         mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         mainPanel.updateUI();
 
-        scrollPaneHolder.updateUI();
         scrollPaneHolder.setOpaque(false);
-        scrollPaneHolder.setBackground(new Color(0, 0, 0, 1));
         scrollPaneHolder.setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 10));
+        scrollPaneHolder.updateUI();
 
+        forecastScroller.setOpaque(false);
+        forecastScroller.setBackground(new Color(0, 0, 0, 0));
+        /*forecastScroller.setBorder(null);
+        scrollerInset.updateUI();*/
 
-        forecastScroller.updateUI();
-        forecastScroller.setOpaque(true);
-        forecastScroller.setBorder(null);
-        scrollerInset.updateUI();
-
-
-        fiveDaySummary.updateUI();
-        fiveDaySummary.setBackground(new Color(0f, 0f, 0f, 0f));
-        fiveDaySummary.setBorder(new LineBorder(new Color(0f, 0f, 0f, .5f), 2, true));
+        fiveDaySummary.setOpaque(false);
         fiveDaySummary.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-
+        fiveDaySummary.updateUI();
     }
 
 
@@ -85,7 +78,6 @@ public class WeatherUI extends JFrame {
         frame.pack();
         setLocationRelativeTo(null);
         engine = new WeatherEngine();
-        createUIComponents();
         frame.setVisible(true);
     }
 
@@ -112,15 +104,13 @@ public class WeatherUI extends JFrame {
      * @noinspection ALL
      */
     private void $$$setupUI$$$() {
-        mainFrame = new JPanel();
+        createUIComponents();
         mainFrame.setLayout(new GridBagLayout());
+        mainFrame.setBackground(new Color(-5958656));
         mainFrame.setMinimumSize(new Dimension(900, 500));
         mainFrame.setOpaque(false);
         mainFrame.setPreferredSize(new Dimension(900, 700));
         mainFrame.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEmptyBorder(), null));
-        mainPanel = new JPanel();
-        mainPanel.setLayout(new BorderLayout(0, 0));
-        mainPanel.setBackground(new Color(-5958656));
         mainPanel.setDoubleBuffered(true);
         mainPanel.setEnabled(true);
         mainPanel.setOpaque(false);
@@ -131,10 +121,9 @@ public class WeatherUI extends JFrame {
         gbc.weightx = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
         mainFrame.add(mainPanel, gbc);
-        scrollPaneHolder = new JPanel();
-        scrollPaneHolder.setLayout(new BorderLayout(0, 0));
-        scrollPaneHolder.setBackground(new Color(-12510403));
+        scrollPaneHolder.setMinimumSize(new Dimension(0, 100));
         scrollPaneHolder.setOpaque(false);
+        scrollPaneHolder.setPreferredSize(new Dimension(0, 150));
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 1;
@@ -142,9 +131,7 @@ public class WeatherUI extends JFrame {
         gbc.weightx = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
         mainFrame.add(scrollPaneHolder, gbc);
-        fiveDaySummary = new JPanel();
-        fiveDaySummary.setLayout(new BorderLayout(0, 0));
-        fiveDaySummary.setBackground(new Color(-7055333));
+        fiveDaySummary.setOpaque(false);
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 2;
@@ -187,6 +174,21 @@ public class WeatherUI extends JFrame {
         }
     }
 
+    private static class MyViewport extends JViewport {
+
+        public MyViewport() {
+            this.setOpaque(false);
+//            this.setPreferredSize(new Dimension(6 * TILE, 6 * TILE));
+        }
+
+        @Override
+        public void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            g.setColor(new Color(0, 0, 0, 0));
+        }
+    }
+
+
     private void createUIComponents() {
         // TODO: place custom component creation code here
         // custom create components here
@@ -197,12 +199,11 @@ public class WeatherUI extends JFrame {
                 g.drawImage(background, 0, 0, this.getWidth(), this.getHeight(), null);
             }
         };
-/*
 
-        mainFrame.setLayout(new GridBagLayout());
+        mainFrame.setLayout(new GridLayout(3, 2));
         mainFrame.setMinimumSize(new Dimension(900, 500));
         mainFrame.setOpaque(false);
-        mainPanel = new JPanel();
+        mainPanel = new TransparentPanel();
         mainPanel.setLayout(new BorderLayout(0, 0));
         mainPanel.setBackground(new Color(-5958656));
         mainPanel.setDoubleBuffered(true);
@@ -216,9 +217,9 @@ public class WeatherUI extends JFrame {
         gbc.weightx = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
         mainFrame.add(mainPanel, gbc);
-        scrollPaneHolder = new JPanel();
+        scrollPaneHolder = new TransparentPanel();
         scrollPaneHolder.setLayout(new BorderLayout(0, 0));
-        scrollPaneHolder.setBackground(new Color(-12510403));
+        scrollPaneHolder.setBackground(new Color(-5958656));
         scrollPaneHolder.setOpaque(false);
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -227,9 +228,13 @@ public class WeatherUI extends JFrame {
         gbc.weightx = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
         mainFrame.add(scrollPaneHolder, gbc);
-        fiveDaySummary = new JPanel();
+        fiveDaySummary = new TransparentPanel();
         fiveDaySummary.setLayout(new BorderLayout(0, 0));
-        fiveDaySummary.setBackground(new Color(-7055333));
+        fiveDaySummary.setBackground(new Color(-5958656));
+        fiveDaySummary.setDoubleBuffered(true);
+        fiveDaySummary.setEnabled(true);
+        fiveDaySummary.setOpaque(false);
+
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 2;
@@ -237,7 +242,7 @@ public class WeatherUI extends JFrame {
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
-        mainFrame.add(fiveDaySummary, gbc);*/
+        mainFrame.add(fiveDaySummary, gbc);
 
 
         /**
@@ -245,6 +250,7 @@ public class WeatherUI extends JFrame {
          * mainSubPanel->mainMenuText, mainMenuText, mainMenuText
          * each Jpanel should be created in its own custom class
          * to tidy up the code (it looks like shit, sorry)
+         * and instantiate in weatherUI meathod, not here
          */
         //setup
         mainMenu = new RoundedPanel();
@@ -319,6 +325,7 @@ public class WeatherUI extends JFrame {
          */
 
 
+        scrollerInset = new TransparentPanel();
         GridBagLayout gridBagLayout = new GridBagLayout();
         GridBagConstraints c = new GridBagConstraints();
         c.fill = GridBagConstraints.HORIZONTAL;
@@ -326,6 +333,7 @@ public class WeatherUI extends JFrame {
         c.ipady = 5;
         c.fill = GridBagConstraints.BOTH;
         gridBagLayout.setConstraints(scrollerInset, c);
+        scrollerInset.setOpaque(false);
         scrollerInset.setBackground(new Color(.2f, .2f, .2f, .7f));
         for (int i = 0; i < forecastList.size(); i++) {
             card = new TransparentPanel();
@@ -349,7 +357,14 @@ public class WeatherUI extends JFrame {
             card.add(cardText);
             scrollerInset.add(card);
         }
-        forecastScroller.setViewportView(scrollerInset);
+
+        JViewport viewport = new MyViewport();
+        viewport.setView(scrollerInset);
+        forecastScroller.setViewport(viewport);
+//        this.add(scrollPane);
+
+
+//        forecastScroller.setViewportView(scrollerInset);
         scrollPaneHolder.add(forecastScroller);
         forecastScroller.setWheelScrollingEnabled(true);
         forecastScroller.getHorizontalScrollBar().setUnitIncrement(32);
@@ -361,6 +376,7 @@ public class WeatherUI extends JFrame {
          * holds 5 day summary
          */
         fiveDaySummaryHolder = new RoundedPanel();
+//        fiveDaySummaryHolder.setOpaque(false);
         fiveDaySummaryHolder.setBackground(new Color(.2f, .2f, .2f, .7f));
         fiveDaySummaryHolder.setLayout(new GridLayout(0, 5, 5, 0));
 
