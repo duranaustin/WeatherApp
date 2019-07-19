@@ -10,7 +10,7 @@ public class RoundedPanel extends JPanel
     protected Dimension _arcs = new Dimension(30, 30);
     protected int _shadowGap = 5;
 
-    protected Color _backgroundColor = Color.LIGHT_GRAY;
+    protected Color _backgroundColor = new Color(0,0,0,0);
 
     public RoundedPanel()
     {

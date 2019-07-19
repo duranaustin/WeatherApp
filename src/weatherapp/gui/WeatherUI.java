@@ -14,9 +14,9 @@ import java.util.List;
 public class WeatherUI extends JFrame {
     private WeatherEngine engine;
 
-    ImageIcon bg = new ImageIcon("/src/weatherapp/resources/image/background.jpg");
-    Image background = bg.getImage();
+
     private JPanel mainFrame;
+    private JPanel mainFrame2;
     private JPanel mainPanel;
     private JScrollPane forecastScroller = new JScrollPane();
     private JPanel scrollerInset;
@@ -105,41 +105,11 @@ public class WeatherUI extends JFrame {
      */
     private void $$$setupUI$$$() {
         createUIComponents();
-        mainFrame.setLayout(new GridBagLayout());
-        mainFrame.setBackground(new Color(-5958656));
+        mainFrame.setBackground(new Color(-12509931));
         mainFrame.setMinimumSize(new Dimension(900, 500));
         mainFrame.setOpaque(false);
         mainFrame.setPreferredSize(new Dimension(900, 700));
         mainFrame.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEmptyBorder(), null));
-        mainPanel.setDoubleBuffered(true);
-        mainPanel.setEnabled(true);
-        mainPanel.setOpaque(false);
-        GridBagConstraints gbc;
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.weightx = 1.0;
-        gbc.fill = GridBagConstraints.BOTH;
-        mainFrame.add(mainPanel, gbc);
-        scrollPaneHolder.setMinimumSize(new Dimension(0, 100));
-        scrollPaneHolder.setOpaque(false);
-        scrollPaneHolder.setPreferredSize(new Dimension(0, 150));
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        gbc.gridwidth = 2;
-        gbc.weightx = 1.0;
-        gbc.fill = GridBagConstraints.BOTH;
-        mainFrame.add(scrollPaneHolder, gbc);
-        fiveDaySummary.setOpaque(false);
-        gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 2;
-        gbc.gridwidth = 2;
-        gbc.weightx = 1.0;
-        gbc.weighty = 1.0;
-        gbc.fill = GridBagConstraints.BOTH;
-        mainFrame.add(fiveDaySummary, gbc);
     }
 
     /**
@@ -178,7 +148,6 @@ public class WeatherUI extends JFrame {
 
         public MyViewport() {
             this.setOpaque(false);
-//            this.setPreferredSize(new Dimension(6 * TILE, 6 * TILE));
         }
 
         @Override
@@ -188,27 +157,53 @@ public class WeatherUI extends JFrame {
         }
     }
 
+    private class MainFrame extends JPanel {
+        ImageIcon bg = new ImageIcon("/src/weatherapp/resources/image/background.jpg");
+        Image background = bg.getImage();
+        public MainFrame() {
+            this.setLayout(new GridLayout(3, 2));
+        }
+
+        @Override
+        public void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            g.drawImage(background, 0, 0, null);
+        }
+
+    }
+    public class ImagePanel extends JPanel {
+        Image im;
+        public ImagePanel(Image im) {
+            this.im = im;
+        }
+
+        public void paintComponent(Graphics g) {
+            g.drawImage(im,0,0, getWidth(), getHeight(), this);
+            super.paintComponent(g);
+        }
+    }
+
+
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
         // custom create components here
-        mainFrame = new JPanel(true) {
-            @Override
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
-                g.drawImage(background, 0, 0, this.getWidth(), this.getHeight(), null);
-            }
-        };
+        mainFrame = new JPanel();
+        mainFrame.setLayout(new BorderLayout());
 
-        mainFrame.setLayout(new GridLayout(3, 2));
-        mainFrame.setMinimumSize(new Dimension(900, 500));
-        mainFrame.setOpaque(false);
-        mainPanel = new TransparentPanel();
+        mainFrame2 = new MainFrame();
+        mainFrame2.setLayout(new GridLayout(3, 2));
+        mainFrame2.setMinimumSize(new Dimension(900, 500));
+        mainFrame2.setPreferredSize(new Dimension(900, 700));
+//        mainFrame2.setOpaque(true);
+//        mainFrame2.setBackground(new Color(0f, 0f, 1f, 1f));
+
+
+        mainPanel = new RoundedPanel();
         mainPanel.setLayout(new BorderLayout(0, 0));
-        mainPanel.setBackground(new Color(-5958656));
+        mainPanel.setBackground(new Color(.2f, .2f, .2f, .0f));
         mainPanel.setDoubleBuffered(true);
         mainPanel.setEnabled(true);
-        mainPanel.setOpaque(false);
         GridBagConstraints gbc;
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -216,10 +211,11 @@ public class WeatherUI extends JFrame {
         gbc.gridwidth = 2;
         gbc.weightx = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
-        mainFrame.add(mainPanel, gbc);
+        mainFrame2.add(mainPanel, gbc);
+
         scrollPaneHolder = new TransparentPanel();
         scrollPaneHolder.setLayout(new BorderLayout(0, 0));
-        scrollPaneHolder.setBackground(new Color(-5958656));
+        scrollPaneHolder.setBackground(new Color(0, 0, 0, 0));
         scrollPaneHolder.setOpaque(false);
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
@@ -227,14 +223,14 @@ public class WeatherUI extends JFrame {
         gbc.gridwidth = 2;
         gbc.weightx = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
-        mainFrame.add(scrollPaneHolder, gbc);
+        mainFrame2.add(scrollPaneHolder, gbc);
+
         fiveDaySummary = new TransparentPanel();
         fiveDaySummary.setLayout(new BorderLayout(0, 0));
-        fiveDaySummary.setBackground(new Color(-5958656));
+        fiveDaySummary.setBackground(new Color(0, 0, 0, 0));
         fiveDaySummary.setDoubleBuffered(true);
         fiveDaySummary.setEnabled(true);
         fiveDaySummary.setOpaque(false);
-
         gbc = new GridBagConstraints();
         gbc.gridx = 0;
         gbc.gridy = 2;
@@ -242,8 +238,8 @@ public class WeatherUI extends JFrame {
         gbc.weightx = 1.0;
         gbc.weighty = 1.0;
         gbc.fill = GridBagConstraints.BOTH;
-        mainFrame.add(fiveDaySummary, gbc);
-
+        mainFrame2.add(fiveDaySummary, gbc);
+        mainFrame.add(mainFrame2);
 
         /**
          * mainPanel->mainMenu->
