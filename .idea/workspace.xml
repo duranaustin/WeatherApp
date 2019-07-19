@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3305d4c-3b41-4a0e-a9ff-84869292a472" name="Default Changelist" comment="" />
+    <list default="true" id="d3305d4c-3b41-4a0e-a9ff-84869292a472" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/weatherapp/resources/images/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI$MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI$MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/resources/images/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/resources/localWeatherCurrent.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/resources/localWeatherCurrent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/resources/localWeatherForecast.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/resources/localWeatherForecast.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weatherapp/resources/images/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherCurrent.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherCurrent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherForecast.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherForecast.json" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +53,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="364">
-                  <caret line="198" column="26" selection-start-line="198" selection-start-column="26" selection-end-line="198" selection-end-column="26" />
+                <state relative-caret-position="1241">
+                  <caret line="175" column="39" selection-start-line="175" selection-start-column="39" selection-end-line="175" selection-end-column="39" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#3932#3933#0" expanded="true" />
@@ -54,9 +66,8 @@
                     <element signature="class#MyViewport#0;class#WeatherUI#0" />
                     <element signature="e#4475#4476#0" expanded="true" />
                     <element signature="e#4520#4521#0" expanded="true" />
-                    <element signature="e#5926#5927#0" expanded="true" />
-                    <element signature="e#5986#5987#0" expanded="true" />
-                    <element signature="e#5171#5172#0" expanded="true" />
+                    <element signature="e#4804#4805#0" expanded="true" />
+                    <element signature="e#4864#4865#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -241,6 +252,21 @@
               <item name="weatherapp" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="WeatherApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="weatherapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="weatherapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -318,7 +344,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16364606" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -498,8 +523,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="198" column="26" selection-start-line="198" selection-start-column="26" selection-end-line="198" selection-end-column="26" />
+        <state relative-caret-position="1241">
+          <caret line="175" column="39" selection-start-line="175" selection-start-column="39" selection-end-line="175" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3932#3933#0" expanded="true" />
@@ -511,9 +536,8 @@
             <element signature="class#MyViewport#0;class#WeatherUI#0" />
             <element signature="e#4475#4476#0" expanded="true" />
             <element signature="e#4520#4521#0" expanded="true" />
-            <element signature="e#5926#5927#0" expanded="true" />
-            <element signature="e#5986#5987#0" expanded="true" />
-            <element signature="e#5171#5172#0" expanded="true" />
+            <element signature="e#4804#4805#0" expanded="true" />
+            <element signature="e#4864#4865#0" expanded="true" />
           </folding>
         </state>
       </provider>

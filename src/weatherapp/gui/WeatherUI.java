@@ -158,8 +158,9 @@ public class WeatherUI extends JFrame {
     }
 
     private class MainFrame extends JPanel {
-        ImageIcon bg = new ImageIcon("/src/weatherapp/resources/image/background.jpg");
+        ImageIcon bg = new ImageIcon("src/weatherapp/resources/images/background.png");
         Image background = bg.getImage();
+
         public MainFrame() {
             this.setLayout(new GridLayout(3, 2));
         }
@@ -167,23 +168,10 @@ public class WeatherUI extends JFrame {
         @Override
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
-            g.drawImage(background, 0, 0, null);
+            g.drawImage(background, 0, 0, getWidth(), getHeight(), null);
         }
 
     }
-    public class ImagePanel extends JPanel {
-        Image im;
-        public ImagePanel(Image im) {
-            this.im = im;
-        }
-
-        public void paintComponent(Graphics g) {
-            g.drawImage(im,0,0, getWidth(), getHeight(), this);
-            super.paintComponent(g);
-        }
-    }
-
-
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
@@ -199,7 +187,7 @@ public class WeatherUI extends JFrame {
 //        mainFrame2.setBackground(new Color(0f, 0f, 1f, 1f));
 
 
-        mainPanel = new RoundedPanel();
+        mainPanel = new TransparentPanel();
         mainPanel.setLayout(new BorderLayout(0, 0));
         mainPanel.setBackground(new Color(.2f, .2f, .2f, .0f));
         mainPanel.setDoubleBuffered(true);
