@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3305d4c-3b41-4a0e-a9ff-84869292a472" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/RoundedPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/RoundedPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/resources/localWeatherCurrent.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/resources/localWeatherCurrent.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/resources/localWeatherForecast.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/resources/localWeatherForecast.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weatherapp/RoundedPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/RoundedPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherCurrent.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherCurrent.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherForecast.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherForecast.json" afterDir="false" />
-    </list>
+    <list default="true" id="d3305d4c-3b41-4a0e-a9ff-84869292a472" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +41,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="161" column="41" selection-start-line="161" selection-start-column="41" selection-end-line="161" selection-end-column="41" />
+                <state relative-caret-position="364">
+                  <caret line="198" column="26" selection-start-line="198" selection-start-column="26" selection-end-line="198" selection-end-column="26" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#3932#3933#0" expanded="true" />
@@ -68,6 +56,7 @@
                     <element signature="e#4520#4521#0" expanded="true" />
                     <element signature="e#5926#5927#0" expanded="true" />
                     <element signature="e#5986#5987#0" expanded="true" />
+                    <element signature="e#5171#5172#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -317,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563482665297</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="gui update 3">
+      <created>1563496612114</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1563496612114</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -382,7 +378,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gui update 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="gui update 1" />
+    <MESSAGE value="gui update 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="gui update 3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherStart.java">
@@ -501,8 +498,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="161" column="41" selection-start-line="161" selection-start-column="41" selection-end-line="161" selection-end-column="41" />
+        <state relative-caret-position="364">
+          <caret line="198" column="26" selection-start-line="198" selection-start-column="26" selection-end-line="198" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3932#3933#0" expanded="true" />
@@ -516,6 +513,7 @@
             <element signature="e#4520#4521#0" expanded="true" />
             <element signature="e#5926#5927#0" expanded="true" />
             <element signature="e#5986#5987#0" expanded="true" />
+            <element signature="e#5171#5172#0" expanded="true" />
           </folding>
         </state>
       </provider>
