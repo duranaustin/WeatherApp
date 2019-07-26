@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3305d4c-3b41-4a0e-a9ff-84869292a472" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/WeatherEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/WeatherEngine.class" afterDir="false" />
@@ -20,6 +21,8 @@
       <change beforePath="$PROJECT_DIR$/src/weatherapp/WeatherStart.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weatherapp/gui/RunUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/gui/RunUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" afterDir="false" />
+=======
+>>>>>>> parent of f42b5de... gitignore
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weatherapp/WeatherEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/WeatherEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherCurrent.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherCurrent.json" afterDir="false" />
@@ -36,6 +39,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -151,6 +155,8 @@
       </file>
     </leaf>
 =======
+=======
+>>>>>>> parent of f42b5de... gitignore
     <splitter split-orientation="horizontal" split-proportion="0.6668682">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -273,6 +279,9 @@
         </leaf>
       </split-second>
     </splitter>
+<<<<<<< HEAD
+>>>>>>> parent of f42b5de... gitignore
+=======
 >>>>>>> parent of f42b5de... gitignore
   </component>
   <component name="FileTemplateManagerImpl">
@@ -307,7 +316,11 @@
       <find>exception</find>
       <find>forecastScroller</find>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <find>$$$setupUI$$$</find>
+=======
+      <find>forecastList.get(i).getIcon()</find>
+>>>>>>> parent of f42b5de... gitignore
 =======
       <find>forecastList.get(i).getIcon()</find>
 >>>>>>> parent of f42b5de... gitignore
@@ -375,8 +388,11 @@
             <path>
               <item name="WeatherApp" type="b2602c69:ProjectViewProjectNode" />
 <<<<<<< HEAD
+<<<<<<< HEAD
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
 =======
+=======
+>>>>>>> parent of f42b5de... gitignore
               <item name="WeatherApp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="weatherapp" type="462c0819:PsiDirectoryNode" />
@@ -397,6 +413,9 @@
               <item name="weatherapp" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="icon" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+>>>>>>> parent of f42b5de... gitignore
+=======
 >>>>>>> parent of f42b5de... gitignore
             </path>
           </expand>
@@ -478,7 +497,11 @@
     <editor active="true" />
     <layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1716418" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20362474" />
+>>>>>>> parent of f42b5de... gitignore
 =======
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20362474" />
 >>>>>>> parent of f42b5de... gitignore
@@ -540,7 +563,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gui update 1" />
     <MESSAGE value="gui update 3" />
+<<<<<<< HEAD
     <option name="LAST_COMMIT_MESSAGE" value="gui update 3" />
+=======
+    <MESSAGE value="gui update 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="gui update 4" />
+>>>>>>> parent of f42b5de... gitignore
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherStart.java">
@@ -568,6 +596,7 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="jar://$PROJECT_DIR$/../Program Files/Java/jdk-12.0.1/lib/src.zip!/java.desktop/com/sun/beans/WildcardTypeImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -591,6 +620,8 @@
     </entry>
 =======
 >>>>>>> parent of f42b5de... gitignore
+=======
+>>>>>>> parent of f42b5de... gitignore
     <entry file="file://$PROJECT_DIR$/src/weatherapp/resources/localWeatherCurrent.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -598,6 +629,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherForecast.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -611,6 +643,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/RoundedPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/RoundedScrollPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
+>>>>>>> parent of f42b5de... gitignore
           <folding>
             <element signature="imports" expanded="true" />
 >>>>>>> parent of f42b5de... gitignore
@@ -618,7 +666,18 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/weatherapp/RoundedScrollPane.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/RunUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherAPI.java">
+>>>>>>> parent of f42b5de... gitignore
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
         <state relative-caret-position="306">
@@ -633,6 +692,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/weatherapp/RoundedScrollPane.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -664,28 +724,46 @@
           <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
         </state>
       </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+>>>>>>> parent of f42b5de... gitignore
     </entry>
     <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherAPI.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="255">
           <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#WeatherAPI#0" />
             <element signature="docComment;method#getJsonWeather#0;class#WeatherAPI#0" />
+=======
+        <state relative-caret-position="510">
+          <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+          <folding>
+            <element signature="e#1396#1397#0" expanded="true" />
+            <element signature="e#1433#1434#0" expanded="true" />
+            <element signature="e#1461#1462#0" expanded="true" />
+>>>>>>> parent of f42b5de... gitignore
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form">
       <provider selected="true" editor-type-id="ui-designer" />
 >>>>>>> parent of f42b5de... gitignore
     </entry>
     <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherCurrent.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java">
+>>>>>>> parent of f42b5de... gitignore
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
           <folding>
+<<<<<<< HEAD
             <element signature="e#1396#1397#0" expanded="true" />
             <element signature="e#1433#1434#0" expanded="true" />
             <element signature="e#1461#1462#0" expanded="true" />
@@ -714,16 +792,22 @@
         <state relative-caret-position="4075">
           <caret line="334" column="102" selection-start-line="334" selection-start-column="73" selection-end-line="334" selection-end-column="102" />
           <folding>
+=======
+>>>>>>> parent of f42b5de... gitignore
             <element signature="imports" expanded="true" />
             <element signature="class#TransparentTextLabel#0;class#WeatherUI#0" />
             <element signature="class#MyViewport#0;class#WeatherUI#0" />
             <element signature="e#4804#4805#0" expanded="true" />
             <element signature="e#4864#4865#0" expanded="true" />
+<<<<<<< HEAD
+>>>>>>> parent of f42b5de... gitignore
+=======
 >>>>>>> parent of f42b5de... gitignore
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherEngine.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -732,6 +816,8 @@
           <folding>
             <element signature="docComment;class#WeatherEngine#0" />
 =======
+=======
+>>>>>>> parent of f42b5de... gitignore
     <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherForecast.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
@@ -739,11 +825,15 @@
           <folding>
             <element signature="e#1528#1529#0" expanded="true" />
             <element signature="e#1563#1564#0" expanded="true" />
+<<<<<<< HEAD
+>>>>>>> parent of f42b5de... gitignore
+=======
 >>>>>>> parent of f42b5de... gitignore
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -758,6 +848,8 @@
             <element signature="e#5300#5301#0" expanded="true" />
             <element signature="e#5360#5361#0" expanded="true" />
 =======
+=======
+>>>>>>> parent of f42b5de... gitignore
     <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherEngine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
@@ -765,10 +857,17 @@
           <folding>
             <element signature="docComment;class#WeatherEngine#0" />
             <element signature="docComment;method#WeatherEngine#0;class#WeatherEngine#0" />
+<<<<<<< HEAD
+>>>>>>> parent of f42b5de... gitignore
+=======
 >>>>>>> parent of f42b5de... gitignore
           </folding>
         </state>
       </provider>
     </entry>
   </component>
+<<<<<<< HEAD
 </project>
+=======
+</project>
+>>>>>>> parent of f42b5de... gitignore
