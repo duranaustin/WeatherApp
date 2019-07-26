@@ -2,6 +2,7 @@ package weatherapp.gui;
 
 import weatherapp.*;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
@@ -9,12 +10,11 @@ import java.awt.image.BufferedImage;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
-/**
- * WeatherUI extends JFrame
- */
-public class WeatherUI extends JFrame {
 
+public class WeatherUI extends JFrame {
     private WeatherEngine engine;
+
+
     private JPanel mainFrame;
     private JPanel mainFrame2;
     private JPanel mainPanel;
@@ -29,39 +29,26 @@ public class WeatherUI extends JFrame {
     private JPanel mainMenu;
     private JPanel mainSubPanel;
     private JPanel mainSubPanelCard;
+
     private JLabel mainMenuText;
     private JLabel cardText;
+
     private List<WeatherForecast> forecastList;
     private WeatherCurrent forecastCurrent;
 
-    /**
-     * WeatherUI constructor
-     * $$$setupUI$$$ background attributed to:
-     * <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by kjpargeter - www.freepik.com</a>
-     */
     public WeatherUI() throws Exception {
         this.engine = new WeatherEngine();
-        setForecastData();
-        $$$setupUI$$$();
-        setUI();
-
-    }
-
-    /**
-     * Set weatherForecast data
-     *
-     * @throws Exception
-     */
-    public void setForecastData() throws Exception {
+        engine.setWeatherCurrent();
         forecastCurrent = engine.getCurrentWeather();
+
         engine.setWeatherForecast();
         forecastList = engine.getForecastList();
-    }
 
-    /**
-     * setUI sets main frame and main panel
-     */
-    public void setUI() {
+        /*
+         * background attributed to:
+         * <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by kjpargeter - www.freepik.com</a>
+         */
+        $$$setupUI$$$();
         mainFrame.updateUI();
 
         mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -79,30 +66,21 @@ public class WeatherUI extends JFrame {
         fiveDaySummary.setOpaque(false);
         fiveDaySummary.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         fiveDaySummary.updateUI();
-
     }
 
 
-    /**
-     * showMainFrame displays app
-     * @throws Exception
-     */
     public void showMainFrame() throws Exception {
         JFrame frame = new JFrame("Weather App");
+
+
         frame.setContentPane(mainFrame);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         setLocationRelativeTo(null);
+        engine = new WeatherEngine();
         frame.setVisible(true);
     }
 
-    /**
-     * getScaledImage
-     * @param srcImg
-     * @param w
-     * @param h
-     * @return
-     */
     private Image getScaledImage(Image srcImg, int w, int h) {
         BufferedImage resizedImg = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = resizedImg.createGraphics();
@@ -112,6 +90,10 @@ public class WeatherUI extends JFrame {
         g2.dispose();
 
         return resizedImg;
+    }
+
+    public static boolean isBetween(int x, int lower, int upper) {
+        return lower <= x && x <= upper;
     }
 
     /**
@@ -138,9 +120,6 @@ public class WeatherUI extends JFrame {
     }
 
 
-    /**
-     * TransparentPanel class
-     */
     private class TransparentPanel extends JPanel {
         {
             setOpaque(false);
@@ -148,10 +127,6 @@ public class WeatherUI extends JFrame {
 
         }
 
-        /**
-         * paintComponent method
-         * @param g
-         */
         public void paintComponent(Graphics g) {
             g.setColor(getBackground());
             Rectangle r = g.getClipBounds();
@@ -160,9 +135,6 @@ public class WeatherUI extends JFrame {
         }
     }
 
-    /**
-     * TransparentTextLabel
-     */
     private class TransparentTextLabel extends JLabel {
         {
             setFocusable(false);
@@ -172,9 +144,6 @@ public class WeatherUI extends JFrame {
         }
     }
 
-    /**
-     * MyViewport class
-     */
     private static class MyViewport extends JViewport {
 
         public MyViewport() {
@@ -188,9 +157,6 @@ public class WeatherUI extends JFrame {
         }
     }
 
-    /**
-     * MainFrame Class
-     */
     private class MainFrame extends JPanel {
         ImageIcon bg = new ImageIcon("src/weatherapp/resources/images/background.png");
         Image background = bg.getImage();
@@ -207,9 +173,6 @@ public class WeatherUI extends JFrame {
 
     }
 
-    /**
-     * createUIComponents does as it says
-     */
     private void createUIComponents() {
         // TODO: place custom component creation code here
         // custom create components here

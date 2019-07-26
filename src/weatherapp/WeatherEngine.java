@@ -32,9 +32,7 @@ public class WeatherEngine {
      * TODO test for type exceptions and nullability of fields
      * @throws Exception Throws an exception if  WeatherEngine fails to run
      */
-    public WeatherEngine() throws Exception {
-        setWeatherCurrent();
-    }
+    public WeatherEngine() { }
 
     public void setWeatherForecast() throws Exception{
         api = new WeatherAPI();//instantiate class

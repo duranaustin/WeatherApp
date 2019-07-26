@@ -33,7 +33,7 @@ public class WeatherCurrent {
         this.wind_deg = wind_deg;
     }
     public WeatherCurrent(){
-        super(); //Calling constructor to initialize fields
+        super();
     }
 
     public String getDescription() {

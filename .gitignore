@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 *.xml
 src/weatherapp/resources/localWeatherForecast.json
 src/weatherapp/resources/localWeatherCurrent.json
 out/production/WeatherApp/weatherapp/resources/localWeatherForecast.json
 out/production/WeatherApp/weatherapp/resources/localWeatherCurrent.json
 .idea/workspace.xml
+=======
+*.xml
+>>>>>>> parent of f42b5de... gitignore
