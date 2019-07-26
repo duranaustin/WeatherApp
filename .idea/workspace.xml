@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3305d4c-3b41-4a0e-a9ff-84869292a472" name="Default Changelist" comment="" />
+    <list default="true" id="d3305d4c-3b41-4a0e-a9ff-84869292a472" name="Default Changelist" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weatherapp/WeatherEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/WeatherEngine.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/WeatherEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/WeatherEngine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/WeatherStart.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/RunUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/RunUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI$MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI$MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI$MyViewport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI$MyViewport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI$TransparentPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI$TransparentPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI$TransparentTextLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI$TransparentTextLabel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/gui/WeatherUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/resources/localWeatherCurrent.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/resources/localWeatherCurrent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/resources/localWeatherForecast.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/resources/localWeatherForecast.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weatherapp/WeatherCurrent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/WeatherCurrent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weatherapp/WeatherEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/WeatherEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weatherapp/WeatherForecast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/WeatherForecast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weatherapp/WeatherStart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weatherapp/gui/RunUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/gui/RunUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherCurrent.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherCurrent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherForecast.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherForecast.json" afterDir="false" />
+    </list>
+>>>>>>> f42b5deeda6db0365eb2c7abc8db74ba950cc4d3
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +39,130 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <splitter split-orientation="horizontal" split-proportion="0.6668682">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherEngine.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="474">
+                  <caret line="169" column="4" selection-start-line="169" selection-start-column="4" selection-end-line="178" selection-end-column="5" />
+                  <folding>
+                    <element signature="docComment;class#WeatherEngine#0" />
+                    <element signature="docComment;method#WeatherEngine#0;class#WeatherEngine#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/weatherapp/resources/localWeatherCurrent.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="458" selection-start-column="458" selection-end-column="458" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="4075">
+                  <caret line="334" column="102" selection-start-line="334" selection-start-column="73" selection-end-line="334" selection-end-column="102" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="class#TransparentTextLabel#0;class#WeatherUI#0" />
+                    <element signature="class#MyViewport#0;class#WeatherUI#0" />
+                    <element signature="e#4804#4805#0" expanded="true" />
+                    <element signature="e#4864#4865#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/weatherapp/RoundedPanel.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="289">
+                  <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/weatherapp/RoundedScrollPane.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="731">
+                  <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherAPI.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="docComment;class#WeatherAPI#0" />
+                    <element signature="docComment;method#getJsonWeather#0;class#WeatherAPI#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherCurrent.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="510">
+                  <caret line="46" column="28" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+                  <folding>
+                    <element signature="e#1396#1397#0" expanded="true" />
+                    <element signature="e#1433#1434#0" expanded="true" />
+                    <element signature="e#1461#1462#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherForecast.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="415">
+                  <caret line="158" column="9" selection-start-line="156" selection-start-column="8" selection-end-line="158" selection-end-column="9" />
+                  <folding>
+                    <element signature="e#1528#1529#0" expanded="true" />
+                    <element signature="e#1563#1564#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/RunUI.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="85">
+                  <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+=======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherEngine.java">
@@ -139,6 +289,7 @@
         </entry>
       </file>
     </leaf>
+>>>>>>> 4ee9b58270b94daed1abb9cab944da5074ae0f36
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -171,8 +322,15 @@
       <find>scrollCard</find>
       <find>exception</find>
       <find>forecastScroller</find>
+<<<<<<< HEAD
+      <find>forecastList.get(i).getIcon()</find>
+=======
       <find>$$$setupUI$$$</find>
+<<<<<<< HEAD
       <find>forecast</find>
+=======
+>>>>>>> 4ee9b58270b94daed1abb9cab944da5074ae0f36
+>>>>>>> f42b5deeda6db0365eb2c7abc8db74ba950cc4d3
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,6 +352,7 @@
         <option value="$PROJECT_DIR$/src/weatherapp/WeatherForecast.java" />
         <option value="$PROJECT_DIR$/src/weatherapp/WeatherEngine.java" />
         <option value="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" />
+        <option value="$PROJECT_DIR$/src/weatherapp/WeatherEngine.java" />
       </list>
     </option>
   </component>
@@ -240,13 +399,37 @@
             </path>
             <path>
               <item name="WeatherApp" type="b2602c69:ProjectViewProjectNode" />
+<<<<<<< HEAD
+              <item name="WeatherApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="weatherapp" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="WeatherUI" type="e9f4de52:FormNode" />
+            </path>
+            <path>
+              <item name="WeatherApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="weatherapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WeatherApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="weatherapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="icon" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+>>>>>>> 4ee9b58270b94daed1abb9cab944da5074ae0f36
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -327,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1563496612114</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="gui update 4">
+      <created>1563498132405</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1563498132405</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -336,7 +526,11 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
+<<<<<<< HEAD
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20362474" />
+=======
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1716418" />
+>>>>>>> 4ee9b58270b94daed1abb9cab944da5074ae0f36
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -346,8 +540,13 @@
       <window_info id="simpleUML" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" weight="0.20693392" />
       <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.19393283" />
+=======
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.032502707" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+>>>>>>> f42b5deeda6db0365eb2c7abc8db74ba950cc4d3
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -406,7 +605,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gui update 1" />
     <MESSAGE value="gui update 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="gui update 3" />
+    <MESSAGE value="gui update 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="gui update 4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -444,6 +644,8 @@
     <entry file="file://$PROJECT_DIR$/src/weatherapp/resources/icon/01d.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+<<<<<<< HEAD
+=======
     <entry file="jar://$PROJECT_DIR$/../Program Files/Java/jdk-12.0.1/lib/src.zip!/java.desktop/com/sun/beans/WildcardTypeImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
@@ -454,6 +656,7 @@
     <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
+>>>>>>> 4ee9b58270b94daed1abb9cab944da5074ae0f36
     <entry file="file://$PROJECT_DIR$/src/weatherapp/resources/localWeatherCurrent.json">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -461,16 +664,67 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/weatherapp/RoundedPanel.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherForecast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+          <folding>
+            <element signature="e#1528#1529#0" expanded="true" />
+            <element signature="e#1606#1607#0" expanded="true" />
+>>>>>>> 4ee9b58270b94daed1abb9cab944da5074ae0f36
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> f42b5deeda6db0365eb2c7abc8db74ba950cc4d3
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/RoundedPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="731">
+          <caret line="47" column="64" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
+=======
         <state relative-caret-position="306">
           <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+>>>>>>> 4ee9b58270b94daed1abb9cab944da5074ae0f36
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/RunUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#WeatherAPI#0" />
+            <element signature="docComment;method#getJsonWeather#0;class#WeatherAPI#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+=======
     <entry file="file://$PROJECT_DIR$/src/weatherapp/RoundedScrollPane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -494,6 +748,7 @@
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
+>>>>>>> 4ee9b58270b94daed1abb9cab944da5074ae0f36
     </entry>
     <entry file="jar://$PROJECT_DIR$/../Program Files/Java/jdk-12.0.1/lib/src.zip!/java.desktop/javax/swing/JPanel.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -506,7 +761,23 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherEngine.java">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4075">
+          <caret line="334" column="102" selection-start-line="334" selection-start-column="73" selection-end-line="334" selection-end-column="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#TransparentTextLabel#0;class#WeatherUI#0" />
+            <element signature="class#MyViewport#0;class#WeatherUI#0" />
+            <element signature="e#4804#4805#0" expanded="true" />
+            <element signature="e#4864#4865#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/RunUI.java">
+>>>>>>> f42b5deeda6db0365eb2c7abc8db74ba950cc4d3
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1751">
           <caret line="124" column="25" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
@@ -521,17 +792,37 @@
         <state relative-caret-position="323">
           <caret line="34" column="45" lean-forward="true" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
           <folding>
+<<<<<<< HEAD
             <element signature="e#1528#1529#0" expanded="true" />
             <element signature="e#1606#1607#0" expanded="true" />
+=======
+            <element signature="e#3319#3320#0" expanded="true" />
+            <element signature="e#3372#3373#0" expanded="true" />
+>>>>>>> 4ee9b58270b94daed1abb9cab944da5074ae0f36
+>>>>>>> f42b5deeda6db0365eb2c7abc8db74ba950cc4d3
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherCurrent.java">
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherForecast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="158" column="9" selection-start-line="156" selection-start-column="8" selection-end-line="158" selection-end-column="9" />
+          <folding>
+            <element signature="e#1528#1529#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherEngine.java">
+>>>>>>> f42b5deeda6db0365eb2c7abc8db74ba950cc4d3
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
           <folding>
+<<<<<<< HEAD
             <element signature="e#1146#1147#0" expanded="true" />
             <element signature="e#1212#1213#0" expanded="true" />
           </folding>
@@ -545,10 +836,15 @@
           <folding>
             <element signature="docComment;class#WeatherAPI#0" />
             <element signature="docComment;method#getJsonWeather#0;class#WeatherAPI#0" />
+=======
+            <element signature="docComment;class#WeatherEngine#0" />
+>>>>>>> 4ee9b58270b94daed1abb9cab944da5074ae0f36
+>>>>>>> f42b5deeda6db0365eb2c7abc8db74ba950cc4d3
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/RunUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -556,6 +852,17 @@
         </state>
       </provider>
     </entry>
+=======
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/weatherapp/WeatherEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="169" column="4" selection-start-line="169" selection-start-column="4" selection-end-line="178" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#WeatherEngine#0" />
+            <element signature="docComment;method#WeatherEngine#0;class#WeatherEngine#0" />
+=======
+>>>>>>> f42b5deeda6db0365eb2c7abc8db74ba950cc4d3
     <entry file="file://$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-97">
@@ -568,6 +875,7 @@
             <element signature="e#4842#4843#0" expanded="true" />
             <element signature="e#5300#5301#0" expanded="true" />
             <element signature="e#5360#5361#0" expanded="true" />
+>>>>>>> 4ee9b58270b94daed1abb9cab944da5074ae0f36
           </folding>
         </state>
       </provider>

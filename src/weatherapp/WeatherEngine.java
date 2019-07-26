@@ -147,17 +147,8 @@ public class WeatherEngine {
         HashMap<String, Object> main = (HashMap<String, Object>) weather.get("main");
         main.get("temp");
 
-        if(main.get("temp") instanceof Integer){
-            weatherCurrent.setTemp((double) ((Integer) main.get("temp")));
-        }else{
-            weatherCurrent.setTemp((Double) main.get("temp"));
-        }
-
-        if(main.get("temp_max") instanceof Integer){
-            weatherCurrent.setTemp_max((double) ((Integer) main.get("temp_max")));
-        }else{
-            weatherCurrent.setTemp_max((Double) main.get("temp_max"));
-        }
+        weatherCurrent.setTemp(objToDouble(main.get("temp")));
+        weatherCurrent.setTemp_max(objToDouble(main.get("temp_max")));
 
         if(main.get("temp_min") instanceof Integer){
             weatherCurrent.setTemp_min((double) ((Integer) main.get("temp_min")));
@@ -176,6 +167,17 @@ public class WeatherEngine {
         }else{
             weatherCurrent.setHumidity((Double) main.get("humidity"));
         }
+    }
+
+    private double objToDouble(Object o) {
+        double d;
+        if(o instanceof Integer){
+            d = (double) ((Integer) o);
+        }
+        else{
+            d = ((Double) o);
+        }
+        return d;
     }
 
     public String getCurrentCity() {

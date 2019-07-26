@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+{"visibility":16093,"timezone":-21600,"main":{"temp":86.09,"pressure":1020,"humidity":35,"temp_min":79,"temp_max":91.99},"clouds":{"all":1},"sys":{"type":1,"id":6116,"message":0.016,"country":"US","sunrise":1564057039,"sunset":1564109431},"dt":1564100901,"coord":{"lon":-111.89,"lat":40.76},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"name":"Salt Lake City","cod":200,"id":5780993,"base":"stations","wind":{"speed":9.17,"deg":170}}
+=======
 {"visibility":16093,"timezone":-21600,"main":{"temp":87.85,"pressure":1020,"humidity":17,"temp_min":81,"temp_max":93.2},"clouds":{"all":20},"sys":{"type":1,"id":4364,"message":0.0135,"country":"US","sunrise":1564057016,"sunset":1564109522},"dt":1564098495,"coord":{"lon":-112.03,"lat":41.11},"weather":[{"id":801,"main":"Clouds","description":"few clouds","icon":"02d"}],"name":"Clearfield","cod":200,"id":5772959,"base":"stations","wind":{"speed":6.93}}
+>>>>>>> 4ee9b58270b94daed1abb9cab944da5074ae0f36
