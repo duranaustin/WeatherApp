@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3305d4c-3b41-4a0e-a9ff-84869292a472" name="Default Changelist" comment="">
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/WeatherEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/WeatherApp/weatherapp/WeatherEngine.class" afterDir="false" />
@@ -21,10 +20,8 @@
       <change beforePath="$PROJECT_DIR$/src/weatherapp/WeatherStart.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weatherapp/gui/RunUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/gui/RunUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/gui/WeatherUI.java" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weatherapp/WeatherEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/WeatherEngine.java" afterDir="false" />
->>>>>>> parent of f42b5de... gitignore
       <change beforePath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherCurrent.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherCurrent.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherForecast.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/weatherapp/resources/localWeatherForecast.json" afterDir="false" />
     </list>
