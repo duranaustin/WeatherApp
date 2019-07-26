@@ -39,7 +39,7 @@ public class WeatherForecast {
         }
 
         public WeatherForecast() {
-                super();
+                super(); //calling constructor to initialize fields
         }
 
         public Integer getTime() {
