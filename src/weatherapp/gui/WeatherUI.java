@@ -8,6 +8,7 @@ import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.text.SimpleDateFormat;
+import java.util.*;
 import java.util.List;
 
 
@@ -395,12 +396,33 @@ public class WeatherUI extends JFrame {
             card.setLayout(new BoxLayout(card, BoxLayout.Y_AXIS));
             fiveDayText = new TransparentTextLabel();
             fiveDayText.setHorizontalAlignment(SwingConstants.CENTER);
-            fiveDayText.setText("<html><div style='font-size:14px; text-align: center;'>" + currentDay + "</div><br>" +
-                    "<div>add image here</div><br><div style='text-align: center;'>" +
-                    "<span style='font-size: 12px;'>&uarr;" + highTemp + "&deg;</span>" +
-                    "</div><div style='font-size: 8px;'>add vertical<br>spacer here</div></html>");
+            fiveDayText.setText("<html><div style='font-size:14px; text-align: center;'>" + currentDay + "</div><br></html>");
+//                    "<div></div><br><div style='text-align: center;'>" +
+//                    "<span style='font-size: 12px;'>&uarr;" + highTemp + "&deg;</span>" +
+//                    "</div><div style='font-size: 8px;'><br></div></html>");
+
             card.add(fiveDayText);
 
+            fiveDayText = new TransparentTextLabel();
+            fiveDayText.setHorizontalAlignment(SwingConstants.CENTER);
+            fiveDayText.setHorizontalTextPosition(JLabel.CENTER);
+            imageIcon = new ImageIcon("src/weatherapp/resources/icon/01d.png");
+            Image image = imageIcon.getImage();
+            Image icon = getScaledImage(image, 50, 50);
+            imageIcon = new ImageIcon(icon);
+            fiveDayText.setIcon(imageIcon);
+//            fiveDayText.setHorizontalTextPosition(JLabel.CENTER);
+//            fiveDayText.setVerticalTextPosition(JLabel.BOTTOM);
+//            fiveDayText.setIconTextGap(-20);
+            card.add(fiveDayText);
+
+            fiveDayText = new TransparentTextLabel();
+            fiveDayText.setHorizontalAlignment(SwingConstants.CENTER);
+            fiveDayText.setText("<html><div style='font-size:14px; text-align: center;'>" +
+                    "<div></div><br><div style='text-align: center;'>" +
+                    "<span style='font-size: 12px;'>&uarr;" + highTemp + "&deg;</span>" +
+                    "</div><div style='font-size: 8px;'><br></div></html>");
+            card.add(fiveDayText);
             /*JPanel v = new TransparentPanel();
             int vHeight = (int)((double) (highTemp-lowTemp));
             v.setSize(1,(vHeight));
@@ -418,5 +440,13 @@ public class WeatherUI extends JFrame {
             currentDay = nextDay;
         }
         fiveDaySummary.add(fiveDaySummaryHolder);
+
+
+    }
+
+    public String weekdayStatusImageBuilder() {
+        HashMap<String, Integer> statusCounter = new HashMap<String, Integer>();
+        return "";
+
     }
 }
